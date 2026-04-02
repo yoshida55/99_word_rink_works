@@ -12,11 +12,9 @@
   --blue-mid: #4a95b5;
   --blue-light: #7cbad4;
   --blue-pale: #d0e8f2;
-  --blue-wash: #e8f3f9;
   --cream: #f5f9fb;
   --text: #263845;
   --text-sub: #5a7a8e;
-  --accent: #c4785a;
   --white: #ffffff;
   --radius: 10px;
   --radius-lg: 18px;
@@ -586,27 +584,6 @@ nav a:hover { color: var(--blue-main); }
   font-weight: 400;
 }
 
-/* ── CTA BAND ── */
-.cta-band {
-  background: var(--blue-main);
-  padding: 3.5rem 2rem;
-  text-align: center;
-}
-
-.cta-band h2 {
-  font-family: "Noto Serif JP", serif;
-  font-size: 1.2rem;
-  font-weight: 400;
-  color: #fff;
-  margin-bottom: 0.8rem;
-}
-
-.cta-band p {
-  font-size: 0.82rem;
-  color: rgba(255, 255, 255, 0.7);
-  margin-bottom: 1.8rem;
-  line-height: 2;
-}
 
 .cta-btn {
   display: inline-flex;
