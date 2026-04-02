@@ -148,10 +148,11 @@ nav a:hover {
 
 .page-hero h1 {
   font-family: "Noto Serif JP", serif;
-  font-size: clamp(1.5rem, 3.5vw, 2.4rem);
-  font-weight: 400;
+  font-size: clamp(2rem, 5.5vw, 4rem);
+  font-weight: 300;
   color: var(--blue-deep);
-  line-height: 1.6;
+  line-height: 1.4;
+  letter-spacing: 0.06em;
   position: relative;
   opacity: 0;
   animation: rise 0.7s 0.35s forwards;
