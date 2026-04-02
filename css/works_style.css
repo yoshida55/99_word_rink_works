@@ -314,84 +314,38 @@ section {
   clip-path: ellipse(55% 100% at 50% 0%);
 }
 
-.phil-body {
+.phil-lead {
   text-align: center;
-  max-width: 600px;
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  color: var(--blue-mid);
+  margin-bottom: 2rem;
+}
+
+.phil-message {
+  max-width: 520px;
   margin: 0 auto;
-}
-
-.phil-body p {
-  font-size: 0.86rem;
-  color: var(--text-sub);
-  line-height: 2.2;
-  margin-bottom: 0.8rem;
-}
-
-.phil-values {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  margin-top: 2.8rem;
-}
-
-.phil-card {
-  background: var(--white);
-  border-radius: var(--radius-lg);
-  padding: 2rem 1.5rem 1.8rem;
   text-align: center;
-  border: 1px solid rgba(42, 107, 138, 0.06);
-  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.phil-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 35px rgba(42, 107, 138, 0.08);
-}
-
-.phil-num {
+.phil-catch {
   font-family: "Noto Serif JP", serif;
-  font-size: 1.8rem;
-  font-weight: 300;
-  color: var(--blue-light);
-  line-height: 1;
-  margin-bottom: 0.8rem;
-}
-
-.phil-card h4 {
-  font-family: "Noto Serif JP", serif;
-  font-size: 0.92rem;
-  font-weight: 500;
+  font-size: clamp(1.2rem, 2.8vw, 1.6rem);
+  font-weight: 400;
   color: var(--blue-deep);
-  margin-bottom: 0.5rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
 }
 
-.phil-card p {
-  font-size: 0.78rem;
+.phil-message p {
+  font-size: 0.88rem;
   color: var(--text-sub);
-  line-height: 1.9;
+  line-height: 2.4;
+  margin-bottom: 1.6rem;
 }
 
-.phil-quote {
-  margin: 3rem auto 0;
-  padding: 1.8rem 2.2rem;
-  background: rgba(42, 107, 138, 0.04);
-  border-left: 3px solid var(--blue-main);
-  border-radius: 0 var(--radius) var(--radius) 0;
-  max-width: 580px;
-}
-
-.phil-quote p {
-  font-family: "Noto Serif JP", serif;
-  font-size: 0.9rem;
-  color: var(--blue-deep);
-  line-height: 2;
-}
-
-.phil-quote .small {
-  font-size: 0.8rem;
-  color: var(--text-sub);
-  font-family: "Zen Kaku Gothic New", sans-serif;
-  margin-top: 0.3rem;
+.phil-message p:last-child {
+  margin-bottom: 0;
 }
 
 /* ── SECTION 3: WORKS ── */
@@ -649,6 +603,73 @@ footer p {
   margin-top: 1.5rem;
   font-size: 0.7rem;
   opacity: 0.4;
+}
+
+/* ── WORKS BALLOON ── */
+.works-balloon {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.balloon-btn {
+  display: inline-block;
+  position: relative;
+  background: var(--blue-main);
+  color: var(--white);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  padding: 0.75rem 2rem;
+  border-radius: 100px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* 吹き出しの三角（上向き） */
+.balloon-btn::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-bottom-color: var(--blue-main);
+  border-top: none;
+}
+
+.balloon-btn:hover {
+  transform: translateY(3px);
+  box-shadow: 0 8px 24px rgba(42, 107, 138, 0.3);
+}
+
+/* ── SCROLL FADE ANIMATIONS ── */
+.js-fade {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.js-fade.js-fade--left  { transform: translateX(-32px); }
+.js-fade.js-fade--right { transform: translateX(32px); }
+.js-fade.is-visible     { opacity: 1; transform: none; }
+
+/* ── HEADER SCROLL ── */
+header {
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+header.scrolled {
+  background: rgba(245, 249, 251, 0.98);
+  box-shadow: 0 2px 16px rgba(27, 58, 79, 0.08);
+}
+
+/* ── WORK IMAGE HOVER ZOOM ── */
+.work-img {
+  transition: transform 0.45s ease;
+}
+
+.work-img-wrap:hover .work-img {
+  transform: scale(1.04);
 }
 
 /* ── RESPONSIVE ── */
