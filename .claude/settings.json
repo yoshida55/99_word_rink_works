@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:c-morinosato.com)",
+      "mcp__pdf-reader__read_pdf"
+    ]
+  }
+}

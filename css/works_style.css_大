@@ -148,11 +148,10 @@ nav a:hover {
 
 .page-hero h1 {
   font-family: "Noto Serif JP", serif;
-  font-size: clamp(2rem, 5.5vw, 4rem);
-  font-weight: 300;
+  font-size: clamp(1.5rem, 3.5vw, 2.4rem);
+  font-weight: 400;
   color: var(--blue-deep);
-  line-height: 1.4;
-  letter-spacing: 0.06em;
+  line-height: 1.6;
   position: relative;
   opacity: 0;
   animation: rise 0.7s 0.35s forwards;
@@ -324,19 +323,18 @@ section {
 }
 
 .phil-message {
-  max-width: 780px;
+  max-width: 520px;
   margin: 0 auto;
   text-align: center;
 }
 
-.phil-message p.phil-catch {
+.phil-catch {
   font-family: "Noto Serif JP", serif;
-  font-size: clamp(1.8rem, 4vw, 3rem);
-  font-weight: 300;
+  font-size: clamp(1.2rem, 2.8vw, 1.6rem);
+  font-weight: 400;
   color: var(--blue-deep);
-  line-height: 1.4;
-  letter-spacing: 0.05em;
-  margin-bottom: 2.5rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
 }
 
 .phil-message p {
@@ -666,7 +664,6 @@ header.scrolled {
 }
 
 /* ── WORK IMAGE HOVER ZOOM ── */
-.work-img-wrap a { display: block; }
 .work-img {
   transition: transform 0.45s ease;
 }

@@ -34,6 +34,18 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* ── GRAIN TEXTURE OVERLAY ── */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+}
+
 /* ── HEADER ── */
 header {
   position: fixed;
@@ -91,11 +103,29 @@ nav a:hover {
 
 /* ── PAGE HERO ── */
 .page-hero {
-  padding: 7.5rem 2rem 3.5rem;
+  padding: 7.5rem 2rem 4.5rem;
   text-align: center;
   background: linear-gradient(175deg, #c8dfe9 0%, #daeaf2 40%, var(--cream) 100%);
   position: relative;
   overflow: hidden;
+}
+
+/* 背景デコ文字 */
+.page-hero::before {
+  content: "WORKS";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -48%);
+  font-family: "Noto Serif JP", serif;
+  font-size: clamp(7rem, 20vw, 16rem);
+  font-weight: 700;
+  color: var(--blue-main);
+  opacity: 0.05;
+  letter-spacing: 0.12em;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .page-hero::after {
@@ -142,6 +172,7 @@ nav a:hover {
   padding: 0.25rem 1.2rem;
   margin-bottom: 1.5rem;
   position: relative;
+  z-index: 1;
   opacity: 0;
   animation: rise 0.7s 0.2s forwards;
 }
@@ -154,6 +185,7 @@ nav a:hover {
   line-height: 1.4;
   letter-spacing: 0.06em;
   position: relative;
+  z-index: 1;
   opacity: 0;
   animation: rise 0.7s 0.35s forwards;
 }
@@ -164,6 +196,7 @@ nav a:hover {
   margin-top: 1rem;
   line-height: 2;
   position: relative;
+  z-index: 1;
   opacity: 0;
   animation: rise 0.7s 0.5s forwards;
 }
@@ -324,19 +357,19 @@ section {
 }
 
 .phil-message {
-  max-width: 780px;
+  max-width: 760px;
   margin: 0 auto;
   text-align: center;
 }
 
 .phil-message p.phil-catch {
   font-family: "Noto Serif JP", serif;
-  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-size: clamp(1.5rem, 3.5vw, 2.4rem);
   font-weight: 300;
   color: var(--blue-deep);
-  line-height: 1.4;
-  letter-spacing: 0.05em;
-  margin-bottom: 2.5rem;
+  line-height: 1.25;
+  letter-spacing: 0.04em;
+  margin-bottom: 2.8rem;
 }
 
 .phil-message p {
@@ -567,7 +600,9 @@ section {
   letter-spacing: 0.06em;
   padding: 0.8rem 2rem;
   border-radius: 100px;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
 }
 
 .cta-btn:hover {
@@ -624,7 +659,9 @@ footer p {
   letter-spacing: 0.06em;
   padding: 0.75rem 2rem;
   border-radius: 100px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 /* 吹き出しの三角（上向き） */
@@ -648,16 +685,27 @@ footer p {
 .js-fade {
   opacity: 0;
   transform: translateY(28px);
-  transition: opacity 0.65s ease, transform 0.65s ease;
+  transition:
+    opacity 0.65s ease,
+    transform 0.65s ease;
 }
 
-.js-fade.js-fade--left  { transform: translateX(-32px); }
-.js-fade.js-fade--right { transform: translateX(32px); }
-.js-fade.is-visible     { opacity: 1; transform: none; }
+.js-fade.js-fade--left {
+  transform: translateX(-32px);
+}
+.js-fade.js-fade--right {
+  transform: translateX(32px);
+}
+.js-fade.is-visible {
+  opacity: 1;
+  transform: none;
+}
 
 /* ── HEADER SCROLL ── */
 header {
-  transition: background 0.3s, box-shadow 0.3s;
+  transition:
+    background 0.3s,
+    box-shadow 0.3s;
 }
 
 header.scrolled {
@@ -666,7 +714,6 @@ header.scrolled {
 }
 
 /* ── WORK IMAGE HOVER ZOOM ── */
-.work-img-wrap a { display: block; }
 .work-img {
   transition: transform 0.45s ease;
 }

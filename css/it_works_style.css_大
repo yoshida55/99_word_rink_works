@@ -232,23 +232,13 @@ nav a:hover { color: var(--blue-main); }
   justify-content: flex-start;
 }
 
-.overview-catch {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  margin-bottom: 2rem;
-}
-
-.catch-line {
-  display: block;
+.overview-body h2 {
   font-family: "Noto Serif JP", serif;
-  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-size: clamp(1.4rem, 2.8vw, 2rem);
   font-weight: 400;
   color: var(--blue-deep);
-  letter-spacing: 0.18em;
-  padding: 0.7rem 0;
-  border-bottom: 1px solid var(--blue-pale);
-  line-height: 1.4;
+  line-height: 1.6;
+  margin-bottom: 1.4rem;
 }
 
 .overview-body p {
@@ -304,21 +294,6 @@ nav a:hover { color: var(--blue-main); }
 
 .overview-img-wrap:hover .overview-img {
   transform: scale(1.03);
-}
-
-/* ── PHOTO STRIP ── */
-.photo-strip {
-  width: 100%;
-  height: clamp(240px, 38vw, 440px);
-  overflow: hidden;
-}
-
-.photo-strip img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 30%;
-  display: block;
 }
 
 /* ── SERVICES: 画像カードグリッド ── */
@@ -457,75 +432,45 @@ nav a:hover { color: var(--blue-main); }
   margin-top: 0.55em;
 }
 
-/* ── SCHEDULE ── */
-.schedule {
+/* ── SUPPORT ── */
+.support {
   padding: 5rem 2rem;
   background: var(--cream);
 }
 
-.schedule-note {
-  font-size: 0.85rem;
-  color: var(--blue-main);
-  margin: -0.5rem 0 2.5rem;
-  font-weight: 500;
-  letter-spacing: 0.04em;
+.support-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
 }
 
-.sch-badge {
-  display: inline-block;
-  background: var(--blue-mid);
-  color: var(--white);
-  font-size: 0.82rem;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  padding: 0.3rem 1.4rem;
-  border-radius: 100px;
-  margin-bottom: 1.2rem;
+.support-item {
+  border-left: 2px solid var(--blue-pale);
+  padding: 0.5rem 0 0.5rem 1.4rem;
 }
 
-.schedule-list {
-  max-width: 480px;
-  display: flex;
-  flex-direction: column;
-  border-radius: 12px;
-  overflow: hidden;
-  border: 1px solid var(--blue-pale);
+.support-num {
+  font-family: "Noto Serif JP", serif;
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: var(--blue-light);
+  line-height: 1;
+  margin-bottom: 0.7rem;
 }
 
-.schedule-item {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  padding: 1rem 1.4rem;
-  background: var(--white);
-  border-bottom: 1px solid var(--blue-pale);
-}
-
-.schedule-item:last-child {
-  border-bottom: none;
-}
-
-.schedule-item.rest {
-  background: #f0f6fa;
-}
-
-.sch-time {
-  font-size: 0.9rem;
-  color: var(--blue-main);
-  letter-spacing: 0.03em;
-  min-width: 128px;
-  font-weight: 500;
-}
-
-.sch-label {
+.support-item h4 {
+  font-family: "Noto Serif JP", serif;
   font-size: 0.95rem;
-  color: var(--blue-deep);
   font-weight: 500;
+  color: var(--blue-deep);
+  margin-bottom: 0.5rem;
 }
 
-.schedule-item.rest .sch-label {
+.support-item p {
+  font-size: 0.78rem;
   color: var(--text-sub);
-  font-weight: 400;
+  line-height: 1.9;
 }
 
 /* ── CTA BAND ── */

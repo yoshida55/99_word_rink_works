@@ -67,7 +67,7 @@
         <h2 class="sec-title">私たちが大切にしている価値観</h2>
 
         <div class="phil-message">
-          <p class="phil-catch">あなたに向いてる、未来の<br />トビラ。</p>
+          <p class="phil-catch">あなたに向いてる、未来のトビラ。</p>
           <p>私たちにできることは、<br />あなたのための明日を、未来を用意すること。<br />それはとてもシンプルなこと。</p>
           <p>人によって<br />「やりたいこと」「できること」「向いていること」<br />が違うから、例えば<br />「やりたいことに出会えるまで」<br />「できることが増えるまで」<br />「向いていることが見つかるまで」<br />それをサポートするということ。</p>
           <p>世の中にはたくさんの仕事があって、<br />たくさんのトビラがあるのだから、<br />あなたが嬉しいと思える場所や時間、<br />未来につながるトビラだって絶対ある。<br />それを私たちが、一緒に探します。</p>
@@ -96,9 +96,7 @@
           <div class="work-row">
             <div class="work-img-wrap">
               <!-- ★ IT作業の画像をここに差し替えてください -->
-              <a href="it_works.html">
-                <img src="img/デスク風景.png" class="work-img" alt="IT作業の様子" />
-              </a>
+              <img src="img/デスク風景.png" class="work-img" alt="IT作業の様子" />
             </div>
             <div class="work-info">
               <div class="work-cat">
@@ -164,7 +162,7 @@
 
       <!-- 詳細リンク 吹き出し -->
       <div class="works-balloon">
-        <a href="it_works.html" class="balloon-btn">詳しい内容についてはここをクリックしてください。</a>
+        <a href="#" class="balloon-btn">詳しい内容についてはここをクリックしてください。</a>
       </div>
     </section>
 
