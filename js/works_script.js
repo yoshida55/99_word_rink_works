@@ -9,7 +9,7 @@
         }
       });
     },
-    { threshold: 0.15 }
+    { threshold: 0.15 },
   );
 
   // ごあいさつ：左右からスライドイン
@@ -21,20 +21,18 @@
     if (i > 0) {
       card.style.transitionDelay = `${i * 0.12}s`;
       // アニメーション完了後にdelayをリセット（ホバーに影響しないように）
-      card.addEventListener("transitionend", () => {
-        card.style.transitionDelay = "";
-      }, { once: true });
+      card.addEventListener(
+        "transitionend",
+        () => {
+          card.style.transitionDelay = "";
+        },
+        { once: true },
+      );
     }
   });
 
   // その他：フェードアップ
-  [
-    ".sec-label", ".sec-title", ".sec-desc",
-    ".phil-body", ".phil-card", ".phil-quote",
-    ".work-row",
-    ".cta-band h2", ".cta-band p", ".cta-btn",
-    ".greeting-sign",
-  ].forEach((sel) => {
+  [".sec-label", ".sec-title", ".sec-desc", ".phil-body", ".phil-card", ".phil-quote", ".work-row", ".cta-band h2", ".cta-band p", ".cta-btn", ".greeting-sign"].forEach((sel) => {
     document.querySelectorAll(sel).forEach((el) => {
       if (!el.classList.contains("js-fade")) el.classList.add("js-fade");
     });
