@@ -1,0 +1,587 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --blue-deep: #1b3a4f;
+  --blue-main: #2a6b8a;
+  --blue-mid: #4a95b5;
+  --blue-light: #7cbad4;
+  --blue-pale: #d0e8f2;
+  --blue-wash: #e8f3f9;
+  --cream: #f5f9fb;
+  --text: #263845;
+  --text-sub: #5a7a8e;
+  --accent: #c4785a;
+  --white: #ffffff;
+  --radius: 10px;
+  --radius-lg: 18px;
+}
+
+body {
+  font-family: "Zen Kaku Gothic New", "Hiragino Sans", sans-serif;
+  color: var(--text);
+  background: var(--cream);
+  font-weight: 400;
+  line-height: 1.95;
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── HEADER ── */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(245, 249, 251, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(42, 107, 138, 0.08);
+  padding: 0 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+header.scrolled {
+  background: rgba(245, 249, 251, 0.98);
+  box-shadow: 0 2px 16px rgba(27, 58, 79, 0.08);
+}
+
+.logo {
+  font-family: "Noto Serif JP", serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--blue-deep);
+  letter-spacing: 0.1em;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.logo-mark {
+  width: 7px;
+  height: 7px;
+  background: var(--blue-main);
+  border-radius: 50%;
+}
+
+nav { display: flex; gap: 2rem; }
+
+nav a {
+  font-size: 0.78rem;
+  color: var(--text-sub);
+  text-decoration: none;
+  letter-spacing: 0.06em;
+  transition: color 0.25s;
+}
+
+nav a:hover { color: var(--blue-main); }
+
+/* ── HERO: 画像 + フローティングパネル ── */
+.page-hero {
+  position: relative;
+  margin-top: 60px;
+  min-height: 560px;
+  overflow: hidden;
+  display: flex;
+  align-items: stretch;
+}
+
+.hero-img {
+  width: 65%;
+  min-height: 560px;
+  object-fit: cover;
+  display: block;
+  flex-shrink: 0;
+}
+
+.hero-panel {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48%;
+  background: var(--blue-deep);
+  color: var(--white);
+  padding: 3.5rem 3rem;
+  z-index: 2;
+}
+
+.hero-label {
+  font-size: 0.68rem;
+  letter-spacing: 0.28em;
+  color: var(--blue-light);
+  margin-bottom: 1.4rem;
+}
+
+.hero-panel h1 {
+  font-family: "Noto Serif JP", serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 300;
+  line-height: 1.4;
+  letter-spacing: 0.06em;
+  margin-bottom: 1.4rem;
+  opacity: 0;
+  animation: rise 0.7s 0.3s forwards;
+}
+
+.hero-panel p {
+  font-size: 0.84rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 2;
+  margin-bottom: 2rem;
+  opacity: 0;
+  animation: rise 0.7s 0.5s forwards;
+}
+
+.hero-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: var(--white);
+  text-decoration: none;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  padding: 0.7rem 1.6rem;
+  border-radius: 100px;
+  transition: background 0.25s, border-color 0.25s;
+  opacity: 0;
+  animation: rise 0.7s 0.65s forwards;
+}
+
+.hero-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* ── SECTION COMMON ── */
+.inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.sec-label {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  color: var(--blue-mid);
+  margin-bottom: 1rem;
+}
+
+.sec-label::after {
+  content: "";
+  flex: 1;
+  max-width: 40px;
+  height: 1px;
+  background: var(--blue-light);
+  opacity: 0.5;
+}
+
+.sec-title {
+  font-family: "Noto Serif JP", serif;
+  font-size: clamp(1.25rem, 2.5vw, 1.7rem);
+  font-weight: 400;
+  text-align: center;
+  color: var(--blue-deep);
+  line-height: 1.7;
+  margin-bottom: 0.8rem;
+}
+
+.sec-desc {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-sub);
+  margin: 0 auto 2.5rem;
+  line-height: 2.1;
+}
+
+/* ── OVERVIEW: テキスト左 + 画像右 ── */
+.overview {
+  padding: 5rem 2rem;
+  background: var(--cream);
+}
+
+.overview-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.overview-body .sec-label {
+  justify-content: flex-start;
+}
+
+.overview-body h2 {
+  font-family: "Noto Serif JP", serif;
+  font-size: clamp(1.4rem, 2.8vw, 2rem);
+  font-weight: 400;
+  color: var(--blue-deep);
+  line-height: 1.6;
+  margin-bottom: 1.4rem;
+}
+
+.overview-body p {
+  font-size: 0.84rem;
+  color: var(--text-sub);
+  line-height: 2.2;
+  margin-bottom: 0.8rem;
+}
+
+.overview-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 1.4rem;
+}
+
+.tag {
+  font-size: 0.73rem;
+  background: var(--blue-pale);
+  color: var(--blue-deep);
+  border-radius: 100px;
+  padding: 0.28rem 0.85rem;
+  letter-spacing: 0.03em;
+}
+
+.overview-img-wrap {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.overview-img-wrap::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: 10px;
+  bottom: 10px;
+  border: 1px solid var(--blue-pale);
+  border-radius: var(--radius-lg);
+  z-index: 0;
+}
+
+.overview-img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  display: block;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.45s ease;
+}
+
+.overview-img-wrap:hover .overview-img {
+  transform: scale(1.03);
+}
+
+/* ── SERVICES: 画像カードグリッド ── */
+.services {
+  padding: 5rem 2rem 9rem;
+  background: var(--blue-deep);
+}
+
+.services .sec-label {
+  color: var(--blue-light);
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.services .sec-label::after {
+  display: none;
+}
+
+.services .sec-title {
+  color: var(--white);
+}
+
+.services .sec-desc {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  align-items: start;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* 階段状レイアウト */
+.service-grid .service-card:nth-child(2) {
+  margin-top: 3rem;
+}
+
+.service-grid .service-card:nth-child(3) {
+  margin-top: 6rem;
+}
+
+.service-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+}
+
+.card-img-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-img-wrap img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s ease;
+}
+
+.service-card:hover .card-img-wrap img {
+  transform: scale(1.06);
+}
+
+.card-label {
+  position: absolute;
+  top: 1.2rem;
+  left: 1.4rem;
+  font-family: "Noto Serif JP", serif;
+  font-size: 2rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+}
+
+.card-body {
+  padding: 2rem 2rem 2.6rem;
+}
+
+.card-body h4 {
+  font-family: "Noto Serif JP", serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--white);
+  margin-bottom: 0.8rem;
+}
+
+.card-body p {
+  font-size: 0.86rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 2.1;
+  margin-bottom: 1.4rem;
+}
+
+.card-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.card-list li {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+  display: flex;
+  align-items: baseline;
+  gap: 0.45rem;
+  line-height: 1.8;
+}
+
+.card-list li::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--blue-mid);
+  flex-shrink: 0;
+  margin-top: 0.55em;
+}
+
+/* ── SUPPORT ── */
+.support {
+  padding: 5rem 2rem;
+  background: var(--cream);
+}
+
+.support-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.support-item {
+  border-left: 2px solid var(--blue-pale);
+  padding: 0.5rem 0 0.5rem 1.4rem;
+}
+
+.support-num {
+  font-family: "Noto Serif JP", serif;
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: var(--blue-light);
+  line-height: 1;
+  margin-bottom: 0.7rem;
+}
+
+.support-item h4 {
+  font-family: "Noto Serif JP", serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--blue-deep);
+  margin-bottom: 0.5rem;
+}
+
+.support-item p {
+  font-size: 0.78rem;
+  color: var(--text-sub);
+  line-height: 1.9;
+}
+
+/* ── CTA BAND ── */
+.cta-band {
+  background: var(--blue-main);
+  padding: 3.5rem 2rem;
+  text-align: center;
+}
+
+.cta-band h2 {
+  font-family: "Noto Serif JP", serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 0.8rem;
+}
+
+.cta-band p {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 1.8rem;
+  line-height: 2;
+}
+
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--white);
+  color: var(--blue-main);
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  padding: 0.8rem 2rem;
+  border-radius: 100px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.2);
+}
+
+.cta-btn svg { width: 14px; height: 14px; }
+
+/* ── FOOTER ── */
+footer {
+  background: #152d3d;
+  color: rgba(255, 255, 255, 0.6);
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.footer-logo {
+  font-family: "Noto Serif JP", serif;
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.1em;
+}
+
+footer p { font-size: 0.76rem; line-height: 2; }
+
+.footer-copy {
+  margin-top: 1.5rem;
+  font-size: 0.7rem;
+  opacity: 0.4;
+}
+
+/* ── SCROLL FADE ── */
+.js-fade {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.js-fade.js-fade--left  { transform: translateX(-32px); }
+.js-fade.js-fade--right { transform: translateX(32px); }
+.js-fade.is-visible     { opacity: 1; transform: none; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .hero-img { width: 100%; min-height: 420px; }
+
+  .hero-panel {
+    position: relative;
+    top: auto;
+    right: auto;
+    transform: none;
+    width: 100%;
+  }
+
+  .page-hero {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .overview-inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .service-grid,
+  .support-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-grid .service-card:nth-child(2),
+  .service-grid .service-card:nth-child(3) {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 720px) {
+  header { padding: 0 1.2rem; }
+  header nav { display: none; }
+  .overview { padding: 3.5rem 1.2rem; }
+  .services, .support { padding: 3.5rem 1.2rem; }
+  .hero-panel { padding: 2.5rem 1.5rem; }
+}
