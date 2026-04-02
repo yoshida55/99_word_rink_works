@@ -457,10 +457,68 @@ nav a:hover { color: var(--blue-main); }
   margin-top: 0.55em;
 }
 
-/* ── SCHEDULE ── */
+/* ── SCHEDULE + CTA ── */
 .schedule {
   padding: 5rem 2rem;
   background: var(--cream);
+}
+
+.schedule-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.schedule-cta {
+  position: sticky;
+  top: 5rem;
+  background: var(--blue-deep);
+  border-radius: 16px;
+  padding: 2.4rem 2rem;
+  color: var(--white);
+  margin-top: 13rem;
+}
+
+.schedule-cta h3 {
+  font-family: "Noto Serif JP", serif;
+  font-size: 0.88rem;
+  font-weight: 500;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.schedule-cta p {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.7);
+  line-height: 2;
+  margin-bottom: 2rem;
+}
+
+.schedule-cta .cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--white);
+  color: var(--blue-deep);
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0.75rem 1.6rem;
+  border-radius: 100px;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.schedule-cta .cta-btn:hover {
+  opacity: 0.85;
+}
+
+.schedule-cta .cta-btn svg {
+  width: 16px;
+  height: 16px;
 }
 
 .schedule-note {
