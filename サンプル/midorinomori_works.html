@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>作業内容 | みどりの杜 就労継続支援A型</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --blue-deep: #1b3a4f;
+    --blue-main: #2a6b8a;
+    --blue-mid: #4a95b5;
+    --blue-light: #7cbad4;
+    --blue-pale: #d0e8f2;
+    --blue-wash: #e8f3f9;
+    --cream: #f5f9fb;
+    --warm: #f0ece4;
+    --text: #263845;
+    --text-sub: #5a7a8e;
+    --accent: #c4785a;
+    --accent-light: #e8a98a;
+    --white: #ffffff;
+    --radius: 10px;
+    --radius-lg: 18px;
+  }
+
+  body {
+    font-family: 'Zen Kaku Gothic New', 'Hiragino Sans', sans-serif;
+    color: var(--text);
+    background: var(--cream);
+    font-weight: 400;
+    line-height: 1.95;
+    font-size: 15px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── HEADER ── */
+  header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(245,249,251,0.88);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(42,107,138,0.08);
+    padding: 0 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+  }
+
+  .logo {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--blue-deep);
+    letter-spacing: 0.1em;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+  }
+
+  .logo-mark {
+    width: 7px; height: 7px;
+    background: var(--blue-main);
+    border-radius: 50%;
+  }
+
+  nav { display: flex; gap: 2rem; }
+
+  nav a {
+    font-size: 0.78rem;
+    color: var(--text-sub);
+    text-decoration: none;
+    letter-spacing: 0.06em;
+    transition: color 0.25s;
+    font-weight: 400;
+  }
+
+  nav a:hover { color: var(--blue-main); }
+
+  /* ── PAGE HERO ── */
+  .page-hero {
+    padding: 7.5rem 2rem 3.5rem;
+    text-align: center;
+    background: linear-gradient(175deg, #c8dfe9 0%, #daeaf2 40%, var(--cream) 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .page-hero::after {
+    content: '';
+    position: absolute;
+    bottom: -1px; left: 0; right: 0;
+    height: 60px;
+    background: var(--cream);
+    clip-path: ellipse(55% 100% at 50% 100%);
+  }
+
+  .hero-deco {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.07;
+  }
+
+  .hero-deco-1 {
+    width: 400px; height: 400px;
+    background: var(--blue-main);
+    top: -120px; right: -80px;
+  }
+
+  .hero-deco-2 {
+    width: 220px; height: 220px;
+    background: var(--accent);
+    bottom: 30px; left: -40px;
+    opacity: 0.05;
+  }
+
+  .page-hero-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.22em;
+    color: var(--blue-main);
+    display: inline-block;
+    border: 1px solid rgba(42,107,138,0.3);
+    border-radius: 100px;
+    padding: 0.25rem 1.2rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    opacity: 0;
+    animation: rise 0.7s 0.2s forwards;
+  }
+
+  .page-hero h1 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(1.5rem, 3.5vw, 2.4rem);
+    font-weight: 400;
+    color: var(--blue-deep);
+    line-height: 1.6;
+    position: relative;
+    opacity: 0;
+    animation: rise 0.7s 0.35s forwards;
+  }
+
+  .page-hero-sub {
+    font-size: 0.85rem;
+    color: var(--text-sub);
+    margin-top: 1rem;
+    line-height: 2;
+    position: relative;
+    opacity: 0;
+    animation: rise 0.7s 0.5s forwards;
+  }
+
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: none; }
+  }
+
+  /* ── SECTION COMMON ── */
+  section { padding: 5rem 2rem; }
+  .inner { max-width: 860px; margin: 0 auto; }
+
+  .sec-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.22em;
+    color: var(--blue-mid);
+    margin-bottom: 1.2rem;
+  }
+
+  .sec-label::before,
+  .sec-label::after {
+    content: '';
+    flex: 1;
+    max-width: 32px;
+    height: 1px;
+    background: var(--blue-light);
+    opacity: 0.5;
+  }
+
+  .sec-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(1.25rem, 2.5vw, 1.7rem);
+    font-weight: 400;
+    text-align: center;
+    color: var(--blue-deep);
+    line-height: 1.7;
+    margin-bottom: 0.8rem;
+  }
+
+  .sec-desc {
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-sub);
+    max-width: 560px;
+    margin: 0 auto 2.5rem;
+    line-height: 2.1;
+  }
+
+  /* ── SECTION 1: GREETING ── */
+  .greeting { background: var(--cream); }
+
+  .greeting-box {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 3rem;
+    align-items: center;
+    margin-top: 2rem;
+  }
+
+  .greeting-visual { position: relative; }
+
+  .greeting-visual::before {
+    content: '';
+    position: absolute;
+    top: -10px; left: -10px;
+    width: 100%; height: 100%;
+    border: 1px solid var(--blue-pale);
+    border-radius: var(--radius-lg);
+  }
+
+  .greeting-img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    position: relative;
+    z-index: 1;
+    background: var(--blue-pale);
+  }
+
+  .greeting-body h3 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--blue-deep);
+    margin-bottom: 1.2rem;
+    line-height: 1.7;
+  }
+
+  .greeting-body p {
+    font-size: 0.84rem;
+    color: var(--text-sub);
+    line-height: 2.2;
+    margin-bottom: 0.8rem;
+  }
+
+  .greeting-sign {
+    margin-top: 1.5rem;
+    font-size: 0.78rem;
+    color: var(--text-sub);
+    text-align: right;
+  }
+
+  .greeting-sign span {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 0.9rem;
+    color: var(--blue-deep);
+    display: block;
+    margin-top: 0.2rem;
+  }
+
+  /* ── SECTION 2: PHILOSOPHY ── */
+  .philosophy {
+    background: linear-gradient(to bottom, var(--blue-wash), var(--cream));
+    position: relative;
+  }
+
+  .philosophy::before {
+    content: '';
+    position: absolute;
+    top: -1px; left: 0; right: 0;
+    height: 60px;
+    background: var(--cream);
+    clip-path: ellipse(55% 100% at 50% 0%);
+  }
+
+  .phil-body {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .phil-body p {
+    font-size: 0.86rem;
+    color: var(--text-sub);
+    line-height: 2.2;
+    margin-bottom: 0.8rem;
+  }
+
+  .phil-values {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 2.8rem;
+  }
+
+  .phil-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 2rem 1.5rem 1.8rem;
+    text-align: center;
+    border: 1px solid rgba(42,107,138,0.06);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .phil-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 35px rgba(42,107,138,0.08);
+  }
+
+  .phil-num {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: var(--blue-light);
+    line-height: 1;
+    margin-bottom: 0.8rem;
+  }
+
+  .phil-card h4 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 0.92rem;
+    font-weight: 500;
+    color: var(--blue-deep);
+    margin-bottom: 0.5rem;
+  }
+
+  .phil-card p {
+    font-size: 0.78rem;
+    color: var(--text-sub);
+    line-height: 1.9;
+  }
+
+  .phil-quote {
+    margin-top: 3rem;
+    padding: 1.8rem 2.2rem;
+    background: rgba(42,107,138,0.04);
+    border-left: 3px solid var(--blue-main);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    max-width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .phil-quote p {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 0.9rem;
+    color: var(--blue-deep);
+    line-height: 2;
+  }
+
+  .phil-quote .small {
+    font-size: 0.8rem;
+    color: var(--text-sub);
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    margin-top: 0.3rem;
+  }
+
+  /* ── SECTION 3: WORK CONTENT ── */
+  .works {
+    background: var(--cream);
+    padding-bottom: 5rem;
+  }
+
+  .work-block { margin-top: 3rem; }
+  .work-block + .work-block { margin-top: 5rem; }
+
+  .work-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.8rem;
+    align-items: center;
+  }
+
+  .work-row.reverse { direction: rtl; }
+  .work-row.reverse > * { direction: ltr; }
+
+  .work-img-wrap {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    position: relative;
+  }
+
+  .work-img-wrap::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: var(--radius-lg);
+    box-shadow: inset 0 0 0 1px rgba(42,107,138,0.08);
+    pointer-events: none;
+  }
+
+  .work-img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    display: block;
+    background: var(--blue-pale);
+  }
+
+  .work-cat {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    color: var(--blue-main);
+    background: var(--blue-wash);
+    border-radius: 100px;
+    padding: 0.3rem 1rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .work-cat-dot {
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--blue-main);
+  }
+
+  .work-info h3 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--blue-deep);
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+  }
+
+  .work-info > p {
+    font-size: 0.84rem;
+    color: var(--text-sub);
+    line-height: 2.2;
+    margin-bottom: 1.2rem;
+  }
+
+  .work-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+  }
+
+  .work-tag {
+    font-size: 0.73rem;
+    background: var(--blue-pale);
+    color: var(--blue-deep);
+    border-radius: 100px;
+    padding: 0.28rem 0.85rem;
+    letter-spacing: 0.03em;
+  }
+
+  .work-points {
+    margin-top: 1.5rem;
+    padding: 1.2rem 1.4rem;
+    background: var(--blue-wash);
+    border-radius: var(--radius);
+  }
+
+  .work-points-title {
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: var(--blue-main);
+    letter-spacing: 0.08em;
+    margin-bottom: 0.6rem;
+  }
+
+  .work-points-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.3rem 1.2rem;
+  }
+
+  .work-points-list li {
+    font-size: 0.78rem;
+    color: var(--text);
+    display: flex;
+    align-items: baseline;
+    gap: 0.45rem;
+    line-height: 1.8;
+  }
+
+  .work-points-list li::before {
+    content: '';
+    width: 4px; height: 4px;
+    border-radius: 50%;
+    background: var(--blue-mid);
+    flex-shrink: 0;
+    margin-top: 0.55em;
+  }
+
+  /* ── CTA BAND ── */
+  .cta-band {
+    background: var(--blue-deep);
+    padding: 3.5rem 2rem;
+    text-align: center;
+  }
+
+  .cta-band h2 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 0.8rem;
+  }
+
+  .cta-band p {
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 1.8rem;
+    line-height: 2;
+  }
+
+  .cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--white);
+    color: var(--blue-deep);
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    padding: 0.8rem 2rem;
+    border-radius: 100px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(0,0,0,0.2);
+  }
+
+  .cta-btn svg { width: 14px; height: 14px; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #152d3d;
+    color: rgba(255,255,255,0.6);
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+
+  .footer-logo {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.1em;
+  }
+
+  footer p { font-size: 0.76rem; line-height: 2; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 720px) {
+    header nav { display: none; }
+    header { padding: 0 1.2rem; }
+
+    .greeting-box {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .phil-values { grid-template-columns: 1fr; }
+
+    .work-row,
+    .work-row.reverse {
+      grid-template-columns: 1fr;
+      direction: ltr;
+    }
+
+    .work-points-list { grid-template-columns: 1fr; }
+
+    section { padding: 3.5rem 1.2rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <a href="#" class="logo">
+    <div class="logo-mark"></div>
+    みどりの杜
+  </a>
+  <nav>
+    <a href="#">ホーム</a>
+    <a href="#greeting">ごあいさつ</a>
+    <a href="#philosophy">企業理念</a>
+    <a href="#works">作業内容</a>
+    <a href="#contact">お問い合わせ</a>
+  </nav>
+</header>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="hero-deco hero-deco-1"></div>
+  <div class="hero-deco hero-deco-2"></div>
+  <div class="page-hero-label">WORK CONTENT</div>
+  <h1>わたしたちの作業について</h1>
+  <p class="page-hero-sub">
+    みどりの杜では、IT作業と経営作業の２つの柱で<br>
+    あなたの「働きたい」を応援しています。
+  </p>
+</div>
+
+
+<!-- ━━━━━━ SECTION 1: GREETING ━━━━━━ -->
+<section class="greeting" id="greeting">
+  <div class="inner">
+    <div class="sec-label">GREETING</div>
+    <h2 class="sec-title">ごあいさつ</h2>
+
+    <div class="greeting-box">
+      <div class="greeting-visual">
+        <!-- ★ 画像をここに差し替えてください -->
+        <img class="greeting-img" src="" alt="みどりの杜の作業風景" />
+      </div>
+      <div class="greeting-body">
+        <h3>一人ひとりの歩幅に合わせて、<br>一緒に進んでいく場所です。</h3>
+        <p>みどりの杜のページをご覧いただき、ありがとうございます。</p>
+        <p>わたしたちは「誰もが安心して働ける居場所」をめざし、就労継続支援A型の事業所として日々活動しています。利用者さん一人ひとりの得意なこと、やってみたいことに耳を傾けながら、無理のないペースで一緒にスキルを育てていきます。</p>
+        <p>このページでは、みどりの杜でどんなお仕事ができるのかをご紹介しています。少しでも興味を持っていただけたら、気軽にご連絡ください。</p>
+        <div class="greeting-sign">
+          就労継続支援A型事業所 みどりの杜
+          <span>スタッフ一同</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ━━━━━━ SECTION 2: PHILOSOPHY ━━━━━━ -->
+<section class="philosophy" id="philosophy">
+  <div class="inner">
+    <div class="sec-label">PHILOSOPHY</div>
+    <h2 class="sec-title">企業理念</h2>
+
+    <div class="phil-body">
+      <p>みどりの杜は、「働く」を通じて自信を取り戻し、社会とのつながりを感じてほしいという想いで生まれました。</p>
+    </div>
+
+    <div class="phil-values">
+      <div class="phil-card">
+        <div class="phil-num">01</div>
+        <h4>寄り添う支援</h4>
+        <p>利用者さん一人ひとりの状況やペースに合わせた、押しつけない丁寧なサポートを大切にしています。</p>
+      </div>
+      <div class="phil-card">
+        <div class="phil-num">02</div>
+        <h4>成長の実感</h4>
+        <p>日々の作業を通じて「できた」が増えていく。その小さな達成感の積み重ねが、確かな自信につながります。</p>
+      </div>
+      <div class="phil-card">
+        <div class="phil-num">03</div>
+        <h4>社会とつながる</h4>
+        <p>実際の仕事を通じて社会と接点を持つことで、次のステップへ進む力を自然に身につけていきます。</p>
+      </div>
+    </div>
+
+    <div class="phil-quote">
+      <p>「はじめの一歩」は、ここから。</p>
+      <p class="small">見学や体験利用も随時受け付けています。どうぞ気軽にお声がけください。</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ━━━━━━ SECTION 3: WORKS ━━━━━━ -->
+<section class="works" id="works">
+  <div class="inner">
+    <div class="sec-label">OUR WORKS</div>
+    <h2 class="sec-title">作業の内容</h2>
+    <p class="sec-desc">
+      みどりの杜では大きく分けて２種類の作業があります。<br>
+      ご自身の興味や体調に合わせて、自分に合った働き方を選べます。
+    </p>
+
+    <!-- (a) IT作業 -->
+    <div class="work-block">
+      <div class="work-row">
+        <div class="work-img-wrap">
+          <!-- ★ IT作業の画像をここに差し替えてください -->
+          <img class="work-img" src="" alt="IT作業の様子" />
+        </div>
+        <div class="work-info">
+          <div class="work-cat">
+            <div class="work-cat-dot"></div>
+            DIGITAL WORK
+          </div>
+          <h3>IT作業</h3>
+          <p>パソコンを使ったデジタルワークです。初めての方でも基礎から丁寧にお教えします。スキルを身につけながら働けるので、将来の就職にも活かせます。リモート対応の案件も多数あります。</p>
+          <div class="work-tags">
+            <span class="work-tag">WEB記事ライティング</span>
+            <span class="work-tag">データ入力・整理</span>
+            <span class="work-tag">画像編集</span>
+            <span class="work-tag">SNS運用補助</span>
+            <span class="work-tag">ECサイト出品補助</span>
+          </div>
+          <div class="work-points">
+            <div class="work-points-title">この作業のポイント</div>
+            <ul class="work-points-list">
+              <li>未経験からでもスタート可能</li>
+              <li>リモートワーク案件あり</li>
+              <li>スキルが将来の武器になる</li>
+              <li>自分のペースで取り組める</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- (b) 経営作業 -->
+    <div class="work-block">
+      <div class="work-row reverse">
+        <div class="work-img-wrap">
+          <!-- ★ 経営作業の画像をここに差し替えてください -->
+          <img class="work-img" src="" alt="経営作業の様子" />
+        </div>
+        <div class="work-info">
+          <div class="work-cat">
+            <div class="work-cat-dot"></div>
+            MANAGEMENT WORK
+          </div>
+          <h3>経営作業</h3>
+          <p>事業所の運営に関わる実務的なお仕事です。書類の整理やデータ管理、備品の発注、スケジュール調整など、事務全般のスキルを実践的に身につけることができます。チームで協力する場面もあり、コミュニケーション力も自然と育ちます。</p>
+          <div class="work-tags">
+            <span class="work-tag">書類整理・ファイリング</span>
+            <span class="work-tag">データ管理</span>
+            <span class="work-tag">備品発注・在庫管理</span>
+            <span class="work-tag">電話・メール対応補助</span>
+            <span class="work-tag">スケジュール管理</span>
+          </div>
+          <div class="work-points">
+            <div class="work-points-title">この作業のポイント</div>
+            <ul class="work-points-list">
+              <li>事務スキルが身につく</li>
+              <li>チームで協力して取り組む</li>
+              <li>責任感とやりがいを実感</li>
+              <li>一般就労への橋渡しになる</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- CTA BAND -->
+<div class="cta-band" id="contact">
+  <h2>まずは見学からでも大丈夫です</h2>
+  <p>みどりの杜の雰囲気を、ぜひ実際に感じてみてください。<br>お気軽にお問い合わせください。</p>
+  <a href="#" class="cta-btn">
+    お問い合わせはこちら
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</div>
+
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">みどりの杜</div>
+  <p>就労継続支援A型事業所<br>
+  〒000-0000 ○○県○○市○○町 1-2-3<br>
+  TEL: 000-000-0000 ／ 受付時間 平日 9:00〜17:00</p>
+  <p style="margin-top:1.5rem;font-size:0.7rem;opacity:0.4;">© 2025 みどりの杜 All rights reserved.</p>
+</footer>
+
+<!-- SMOOTH SCROLL -->
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      const el = document.querySelector(a.getAttribute('href'));
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+</script>
+
+</body>
+</html>
