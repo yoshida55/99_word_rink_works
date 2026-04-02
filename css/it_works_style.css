@@ -90,17 +90,18 @@ nav a:hover { color: var(--blue-main); }
   position: relative;
   margin-top: 60px;
   min-height: 560px;
-  overflow: hidden;
   display: flex;
   align-items: stretch;
 }
 
 .hero-img {
-  width: 65%;
+  width: 62%;
   min-height: 560px;
   object-fit: cover;
   display: block;
   flex-shrink: 0;
+  border-radius: 20px 0 0 20px;
+  margin: 1.5rem 0 1.5rem 1.5rem;
 }
 
 .hero-panel {
