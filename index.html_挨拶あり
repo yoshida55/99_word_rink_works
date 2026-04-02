@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>作業内容 | リンクワークス仙台駅前 就労継続支援A型</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/works_style.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <a href="#" class="logo">
+        <div class="logo-mark"></div>
+        リンクワークス仙台駅前
+      </a>
+      <nav>
+        <a href="#">ホーム</a>
+        <a href="#greeting">ごあいさつ</a>
+        <a href="#philosophy">企業理念</a>
+        <a href="#works">作業内容</a>
+        <a href="#contact">お問い合わせ</a>
+      </nav>
+    </header>
+
+    <!-- PAGE HERO -->
+    <div class="page-hero">
+      <div class="hero-deco hero-deco-1"></div>
+      <div class="hero-deco hero-deco-2"></div>
+      <div class="page-hero-label">WORK CONTENT</div>
+      <h1>作業内容</h1>
+      <p class="page-hero-sub">
+        リンクワークス仙台駅前では、IT作業と経営作業の２つの柱で<br />
+        あなたの「働きたい」を応援しています。
+      </p>
+    </div>
+
+    <!-- SECTION 1: GREETING -->
+    <section class="greeting" id="greeting">
+      <div class="inner">
+        <div class="sec-label">GREETING</div>
+        <h2 class="sec-title">ごあいさつ</h2>
+
+        <div class="greeting-box">
+          <div class="greeting-visual">
+            <!-- ★ 画像をここに差し替えてください -->
+            <img src="img/デスク風景.png" class="greeting-img" alt="リンクワークス仙台駅前の作業風景" />
+          </div>
+          <div class="greeting-body">
+            <h3>一人ひとりの歩幅に合わせて、<br />一緒に進んでいく場所です。</h3>
+            <p>リンクワークス仙台駅前のページをご覧いただき、ありがとうございます。</p>
+            <p>わたしたちは「誰もが安心して働ける居場所」をめざし、就労継続支援A型の事業所として日々活動しています。利用者さん一人ひとりの得意なこと、やってみたいことに耳を傾けながら、無理のないペースで一緒にスキルを育てていきます。</p>
+            <p>このページでは、リンクワークス仙台駅前でどんなお仕事ができるのかをご紹介しています。少しでも興味を持っていただけたら、気軽にご連絡ください。</p>
+            <div class="greeting-sign">
+              就労継続支援A型事業所 リンクワークス仙台駅前
+              <span>スタッフ一同</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: PHILOSOPHY -->
+    <section class="philosophy" id="philosophy">
+      <div class="inner">
+        <div class="sec-label">PHILOSOPHY</div>
+        <h2 class="sec-title">私たちが大切にしている価値観</h2>
+
+        <div class="phil-message">
+          <p class="phil-catch">あなたに向いてる、未来の<br />トビラ。</p>
+          <p>私たちにできることは、<br />あなたのための明日を、未来を用意すること。<br />それはとてもシンプルなこと。</p>
+          <p>人によって<br />「やりたいこと」「できること」「向いていること」<br />が違うから、例えば<br />「やりたいことに出会えるまで」<br />「できることが増えるまで」<br />「向いていることが見つかるまで」<br />それをサポートするということ。</p>
+          <p>世の中にはたくさんの仕事があって、<br />たくさんのトビラがあるのだから、<br />あなたが嬉しいと思える場所や時間、<br />未来につながるトビラだって絶対ある。<br />それを私たちが、一緒に探します。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: WORKS -->
+    <section class="works" id="works">
+      <div class="inner">
+        <div class="sec-label">OUR WORKS</div>
+        <h2 class="sec-title">作業の内容</h2>
+        <p class="sec-desc">
+          リンクワークス仙台駅前では大きく分けて２種類の作業があります。<br />
+          ご自身の興味や体調に合わせて、自分に合った働き方を選べます。
+        </p>
+
+        <!-- タブボタン -->
+        <div class="tabs" role="tablist">
+          <button class="tab-btn active" role="tab" data-tab="it">Ｉ Ｔ 作 業</button>
+          <button class="tab-btn" role="tab" data-tab="light">軽　作　業</button>
+        </div>
+
+        <!-- IT作業 パネル -->
+        <div class="tab-panel active" id="panel-it">
+          <div class="work-row">
+            <div class="work-img-wrap">
+              <!-- ★ IT作業の画像をここに差し替えてください -->
+              <a href="it_works.html">
+                <img src="img/デスク風景.png" class="work-img" alt="IT作業の様子" />
+              </a>
+            </div>
+            <div class="work-info">
+              <h3>IT作業</h3>
+              <p>パソコンを使ったデジタルワークです。初めての方でも基礎から丁寧にお教えします。スキルを身につけながら働けるので、将来の就職にも活かせます。</p>
+              <div class="work-tags">
+                <span class="work-tag">ホームページ制作</span>
+                <span class="work-tag">WordPress運用</span>
+                <span class="work-tag">AI活用サポート</span>
+              </div>
+              <div class="work-points">
+                <div class="work-points-title">この作業のポイント</div>
+                <ul class="work-points-list">
+                  <li>未経験からでもスタート可能</li>
+                  <li>研修があるから安心</li>
+                  <li>スキルが将来の武器になる</li>
+                  <li>自分のペースで取り組める</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 軽作業 パネル -->
+        <div class="tab-panel" id="panel-light">
+          <div class="work-row">
+            <div class="work-img-wrap">
+              <img class="work-img" src="img/軽作業作業風景_l.jpg" alt="軽作業の様子" />
+            </div>
+            <div class="work-info">
+              <h3>軽作業</h3>
+              <p>体を動かしながら、集中して取り組める作業です。手先を使う仕事が好きな方、コツコツと丁寧な作業が得意な方に向いています。難しいスキルは必要ありません。</p>
+              <div class="work-tags">
+                <span class="work-tag">封入・梱包作業</span>
+                <span class="work-tag">仕分け・ピッキング</span>
+                <span class="work-tag">シール貼り</span>
+                <span class="work-tag">組み立て作業</span>
+                <span class="work-tag">検品・数量確認</span>
+              </div>
+              <div class="work-points">
+                <div class="work-points-title">この作業のポイント</div>
+                <ul class="work-points-list">
+                  <li>特別なスキルは不要</li>
+                  <li>体を動かしながら働ける</li>
+                  <li>達成感を得やすい</li>
+                  <li>チームで協力して取り組む</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 詳細リンク 吹き出し -->
+      <div class="works-balloon">
+        <a href="it_works.html" class="balloon-btn">詳しい内容についてはここをクリックしてください。</a>
+      </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-logo">リンクワークス仙台駅前</div>
+      <p>
+        就労継続支援A型事業所<br />
+        〒000-0000 ○○県○○市○○町 1-2-3<br />
+        TEL: 000-000-0000 ／ 受付時間 平日 9:00〜17:00
+      </p>
+      <p class="footer-copy">© 2025 リンクワークス仙台駅前 All rights reserved.</p>
+    </footer>
+
+    <script src="js/works_script.js"></script>
+  </body>
+</html>
