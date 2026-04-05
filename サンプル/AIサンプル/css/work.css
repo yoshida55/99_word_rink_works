@@ -1,0 +1,68 @@
+:root {
+  --side-width: 35rem;
+  --sect-label-font-size: 1.4rem; /* タイトルの上のラベル */
+  --font-color: #5a7a8e;
+}
+
+body {
+  font-family: "Zen Kaku Gothic New", "Hiragino Sans", sans-serif;
+  color: var(--font-color);
+  background: var(--cream);
+  line-height: 1.95;
+  font-size: 1.4rem;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===========================
+   作業内容 メインビジュアル
+=========================== */
+
+.works_area {
+  padding: 6rem var(--side-width);
+  background: linear-gradient(175deg, #85bdd1 0%, #aad0e2 50%, #daeaf2 100%);
+
+  position: relative;
+  border: 0.5rem solid red;
+}
+
+.section_label {
+  width: fit-content;
+  font-size: var(--sect-label-font-size);
+  padding: 0.5rem 1rem;
+  letter-spacing: 0.3rem;
+
+  margin: 0 auto;
+
+  color: black;
+  outline: 0.1rem solid #4a95b5;
+  border-radius: 100px;
+
+  background: transparent;
+}
+
+.works_title {
+  text-align: center;
+  font-size: 8rem;
+  letter-spacing: 0.3rem;
+
+  margin-top: 1rem;
+}
+
+.works_description {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.hero-deco {
+  position: absolute;
+  top: -10rem;
+  right: -10rem;
+
+  width: 50rem;
+  height: 100rem;
+
+  outline: 1rem solid blue;
+  border-radius: 50%; /* 丸にする */
+  opacity: 0.07; /* かなり薄く */
+  background-color: blue;
+}

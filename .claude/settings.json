@@ -2,7 +2,18 @@
   "permissions": {
     "allow": [
       "WebFetch(domain:c-morinosato.com)",
-      "mcp__pdf-reader__read_pdf"
+      "mcp__pdf-reader__read_pdf",
+      "Read(//d/02_作業/09_自社ホームぺージ/**)",
+      "Bash(curl -s -X POST http://127.0.0.1:3848/highlight-line -H \"Content-Type: application/json\" --data-binary \"{\"\"filePath\"\": \"\"D:/50_knowledge/01_memo.md\"\", \"\"lineNumber\"\": 18685}\")",
+      "Skill(update-config)",
+      "Skill(update-config:*)",
+      "Bash(\"D:/50_knowledge/01_memo.md\":*)",
+      "Bash(curl -s -X POST http://127.0.0.1:3848/highlight-line -H \"Content-Type: application/json\" --data-binary \"{\"\"filePath\"\": \"\"D:/50_knowledge/01_memo.md\"\", \"\"lineNumber\"\": 18741}\")",
+      "Edit(~/.claude/skills/auto-class/**)",
+      "Edit(~/.claude/skills/auto-skeleton/**)"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\sensh\\.claude\\skills"
     ]
   }
 }

@@ -3,185 +3,90 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>IT作業について | リンクワークス仙台駅前 就労継続支援A型</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <title>IT作業について | リンクワークス仙台駅前</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/it_works_style.css" />
   </head>
   <body>
-    <!-- HEADER -->
-    <header>
-      <a href="index.html" class="logo">
-        <div class="logo-mark"></div>
-        リンクワークス仙台駅前
-      </a>
-      <nav>
-        <a href="index.html">ホーム</a>
-        <a href="index.html#greeting">ごあいさつ</a>
-        <a href="index.html#philosophy">企業理念</a>
-        <a href="index.html#works">作業内容</a>
-        <a href="index.html#contact">お問い合わせ</a>
-      </nav>
-    </header>
-
-    <!-- HERO: 画像左 + パネル右フロート（UMICAHI風） -->
-    <div class="page-hero">
-      <img src="img/IT作業風景.jpg" class="hero-img" alt="IT作業の様子" />
-      <div class="hero-panel">
-        <div class="hero-label">IT WORK</div>
-        <h1>仙台駅から5分、落ち着いて働ける作業所。</h1>
-        <p>リンクワークス仙台駅前は、仙台西口に構えた就労継続支援A型の施設です。静かな環境のなかで、パソコンを使ったIT作業に取り組めます。</p>
-        <a href="#services" class="hero-btn">業務内容を見る</a>
-      </div>
-    </div>
-
-    <!-- OVERVIEW: テキスト左 + 画像右 -->
-    <section class="overview" id="overview">
-      <div class="overview-inner">
-        <div class="overview-body">
-          <div class="sec-label">OVERVIEW</div>
-          <div class="overview-catch">
-            <span class="catch-line">未経験でも、大丈夫。</span>
-            <span class="catch-line">スキルが、武器になる。</span>
-            <span class="catch-line">あなたのペースで、進める。</span>
-          </div>
-          <p>リンクワークス仙台駅前のIT作業は、パソコンが初めての方でも基礎からていねいにお教えします。自分のペースで少しずつスキルを積み上げていける環境です。</p>
+    <header> </header>
+    <main>
+      <!-- ===============================================
+       メインビジュアル（画像＋パネル重ね）
+       ============================================== -->
+      <section class="hero_area">
+        <img class="hero_image" src="img/IT作業風景.jpg" alt="デスク風景" />
+        <!-- └ コンテンツ側（右） -->
+        <div class="hero_content">
+          <span class="hero_label">IT WORK</span>
+          <h1 class="hero_title">仙台駅から5分、落ち着いて働ける作業所。</h1>
+          <p class="hero_description">リンクワークス仙台駅前は、仙台西口に構えた就労継続支援A型の施設です。静かな環境のなかで、パソコンを使ったIT作業に取り組めます。</p>
+          <a href="#" class="hero_link">業務内容を見る</a>
         </div>
-        <div class="overview-img-wrap">
-          <img src="img/デスク風景.png" class="overview-img" alt="デスクでの作業風景" />
+      </section>
+      <!-- ===============================================
+       OVERVIEW【flex 横2列: テキスト側 + 画像側】
+       =============================================== -->
+      <section class="overview_area">
+        <!-- └ テキスト側（左） -->
+        <div class="overview_content">
+          <span class="overview_label">OVERVIEW</span>
+          <h2 class="overview_title">未経験でも、大丈夫。<br />スキルが、武器になる。<br />あなたのペースで、進める。</h2>
+          <p class="overview_description">リンクワークス仙台駅前のIT作業は、パソコンが初めての方でも基礎からていねいにお教えします。自分のペースで少しずつスキルを積み上げていける環境です。</p>
         </div>
-      </div>
-    </section>
-
-    <!-- PHOTO STRIP -->
-    <div class="photo-strip">
-      <img src="img/IT作業風景（ココア）.png" alt="IT作業の様子" />
-    </div>
-
-    <!-- SERVICES: 画像カードグリッド -->
-    <section class="services" id="services">
-      <div class="inner">
-        <div class="sec-label">SERVICES</div>
-        <h2 class="sec-title">業務内容</h2>
-        <p class="sec-desc"> ご自身の興味や習熟度に合わせて、担当業務を選べます。 </p>
-
-        <div class="service-grid">
-          <div class="service-card">
-            <div class="card-img-wrap">
-              <img src="img/デスク風景.png" alt="ホームページ制作" />
-              <div class="card-label">01</div>
-            </div>
-            <div class="card-body">
-              <h4>ホームページ制作</h4>
-              <p>HTMLやCSSを使ったウェブサイト制作をサポート。コーディング補助やバナー作成など幅広い工程を担当できます。</p>
-              <ul class="card-list">
-                <li>HTML / CSS コーディング</li>
-                <li>バナー・画像作成</li>
-                <li>テキスト入力・更新</li>
-              </ul>
-            </div>
+        <!-- └ 画像側（右） -->
+        <img class="overview_img" src="img/デスク風景.png" alt="落ち着いた雰囲気 of PC作業スペース" />
+      </section>
+      <!-- ===============================================
+       作業風景
+       =============================================== -->
+      <section class="work_area">
+        <img class="work_img" src="img/IT作業風景（ココア）.png" alt="" />
+      </section>
+      <!-- ===============================================
+       業務内容【grid 横3列: カード + カード + カード】
+       =============================================== -->
+      <section class="service_area">
+        <span class="service_label">SERVICES</span>
+        <h2 class="service_title">業務内容</h2>
+        <p class="service_lead">ご自身の興味や習熟度に合わせて、担当業務を選べます。</p>
+        <!-- └ カードラッパー【flex 横3列: カード】 -->
+        <div class="service_wrapper">
+          <!-- └ カード -->
+          <div class="service_item">
+            <img class="service_img" src="img/デスク風景.png" alt="ホームページ制作の作業風景" />
+            <p class="service_item_title">ホームページ制作</p>
+            <p class="service_item_description">HTMLやCSSを使ったウェブサイト制作をサポート。コーディング補助やバナー作成など幅広い工程を担当できます。</p>
+            <ul class="service_list">
+              <li>HTML / CSS コーディング</li>
+              <li>バナー・画像作成</li>
+              <li>テキスト入力・更新</li>
+            </ul>
           </div>
-
-          <div class="service-card">
-            <div class="card-img-wrap">
-              <img src="img/IT作業風景.jpg" alt="WordPress運用" />
-              <div class="card-label">02</div>
-            </div>
-            <div class="card-body">
-              <h4>WordPress運用</h4>
-              <p>記事作成・更新・管理補助を行います。操作を学びながら実務で活かせるスキルが身につきます。</p>
-              <ul class="card-list">
-                <li>記事の作成・更新</li>
-                <li>画像アップロード・整理</li>
-                <li>プラグイン設定補助</li>
-              </ul>
-            </div>
+          <!-- └ カード -->
+          <div class="service_item">
+            <img class="service_img" src="img/IT作業風景.jpg" alt="WordPress運用の作業風景" />
+            <p class="service_item_title">WordPress運用</p>
+            <p class="service_item_description">記事作成・更新・管理補助を行います。操作を学びながら実務で活かせるスキルが身につきます。</p>
+            <ul class="service_list">
+              <li>記事の作成・更新</li>
+              <li>画像アップロード・整理</li>
+              <li>プラグイン設定補助</li>
+            </ul>
           </div>
-
-          <div class="service-card">
-            <div class="card-img-wrap">
-              <img src="img/デスク風景.webp" alt="AI活用サポート" />
-              <div class="card-label">03</div>
-            </div>
-            <div class="card-body">
-              <h4>AI活用サポート</h4>
-              <p>ChatGPTなどのAIツールを活用した文章作成・要約・データ整理をサポートします。</p>
-              <ul class="card-list">
-                <li>AI文章作成・校正補助</li>
-                <li>データ整理・要約</li>
-                <li>SNS投稿文の作成補助</li>
-              </ul>
-            </div>
+          <!-- └ カード -->
+          <div class="service_item">
+            <img class="service_img" src="img/デスク風景.png" alt="AI活用サポートの作業風景" />
+            <p class="service_item_title">AI活用サポート</p>
+            <p class="service_item_description">ChatGPTなどのAIツールを活用した文章作成・要約・データ整理をサポートします。</p>
+            <ul class="service_list">
+              <li>AI文章作成・校正補助</li>
+              <li>データ整理・要約</li>
+              <li>SNS投稿文の作成補助</li>
+            </ul>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- SCHEDULE + CTA -->
-    <section class="schedule" id="schedule">
-      <div class="schedule-inner">
-        <!-- 左：1日の流れ -->
-        <div class="schedule-body">
-          <div class="sec-label">DAILY FLOW</div>
-          <h2 class="sec-title">1日の流れ</h2>
-          <p class="schedule-note">研修があるから、初めての方でも安心してスタートできます。</p>
-          <div class="sch-badge">施設内</div>
-          <div class="schedule-list">
-            <div class="schedule-item">
-              <span class="sch-time">09:30 – 10:40</span>
-              <span class="sch-label">朝礼・作業開始</span>
-            </div>
-            <div class="schedule-item rest">
-              <span class="sch-time">10:40 – 10:50</span>
-              <span class="sch-label">休憩</span>
-            </div>
-            <div class="schedule-item">
-              <span class="sch-time">10:50 – 12:00</span>
-              <span class="sch-label">作業</span>
-            </div>
-            <div class="schedule-item rest">
-              <span class="sch-time">12:00 – 12:45</span>
-              <span class="sch-label">お昼休み</span>
-            </div>
-            <div class="schedule-item">
-              <span class="sch-time">12:45 – 13:40</span>
-              <span class="sch-label">作業</span>
-            </div>
-            <div class="schedule-item rest">
-              <span class="sch-time">13:40 – 13:45</span>
-              <span class="sch-label">休憩</span>
-            </div>
-            <div class="schedule-item">
-              <span class="sch-time">13:45 – 14:40</span>
-              <span class="sch-label">作業・清掃・終礼</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- 右：お問い合わせ -->
-        <div class="schedule-cta" id="contact">
-          <h3>まずは見学からでも大丈夫です</h3>
-          <p>リンクワークス仙台駅前の雰囲気を、ぜひ実際に感じてみてください。お気軽にお問い合わせください。</p>
-          <a href="index.html#contact" class="cta-btn">
-            お問い合わせはこちら
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-      <div class="footer-logo">リンクワークス仙台駅前</div>
-      <p>
-        就労継続支援A型事業所<br />
-        〒000-0000 ○○県○○市○○町 1-2-3<br />
-        TEL: 000-000-0000 ／ 受付時間 平日 9:00〜17:00
-      </p>
-      <p class="footer-copy">© 2025 リンクワークス仙台駅前 All rights reserved.</p>
-    </footer>
-
-    <script src="js/it_works_script.js"></script>
+      </section>
+    </main>
   </body>
 </html>

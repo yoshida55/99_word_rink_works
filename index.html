@@ -3,146 +3,99 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>作業内容 | リンクワークス仙台駅前 就労継続支援A型</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <title>リンクワークス仙台駅前 | 就労継続支援事業所A型</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/works_style.css" />
   </head>
   <body>
-    <!-- HEADER -->
-    <header>
-      <a href="#" class="logo">
-        <div class="logo-mark"></div>
-        リンクワークス仙台駅前
-      </a>
-      <nav>
-        <a href="#">ホーム</a>
-        <a href="#philosophy">企業理念</a>
-        <a href="#works">作業内容</a>
-        <a href="#contact">お問い合わせ</a>
-      </nav>
-    </header>
+    <header> </header>
+    <main>
+      <!-- ===============================================
+       作業内容 メインビジュアル
+       =============================================== -->
+      <section class="works_area">
+        <div class="hero_deco right"></div>
+        <div class="hero_deco left"></div>
+        <span class="work_label">WORK CONTENT</span>
+        <h2 class="works_title">作業内容</h2>
+        <p class="works_description">リンクワークス仙台駅前では、IT作業と経営作業の２つの柱で<br />あなたの「働きたい」を応援しています。</p>
+      </section>
+      <!-- ===============================================
+       企業理念・価値観
+       =============================================== -->
+      <section class="philosophy_area">
+        <div class="section_label">PHILOSOPHY</div>
+        <h2 class="section_title">私たちが大切にしている価値観</h2>
+        <p class="philosophy_catch">あなたに向いてる、未来の<br />トビラ。</p>
+        <p class="philosophy_description">私たちにできることは、<br />あなたのための明日を、未来を用意すること。<br />それはとてもシンプルなこと。</p>
+        <p class="philosophy_description">人によって<br />「やりたいこと」「できること」「向いていること」<br />が違うから、例えば<br />「やりたいことに出会えるまで」<br />「できることが増えるまで」<br />「向いていることが見つかるまで」<br />それをサポートするということ。</p>
+        <p class="philosophy_description">世の中にはたくさんの仕事があって、<br />たくさんのトビラがあるのだから、<br />あなたが嬉しいと思える場所や時間、<br />未来につながるトビラだって絶対ある。<br />それを私たちが、一緒に探します。</p>
+      </section>
+      <!-- ===============================================
+       作業内容
+       =============================================== -->
+      <section class="works_tab_area">
+        <span class="section_label">OUR WORKS</span>
+        <h2 class="section_title">作業の内容</h2>
+        <p class="works_tab_description">リンクワークス仙台駅前では大きく分けて２種類の作業があります。 <br />ご自身の興味や体調に合わせて、自分に合った働き方を選べます。</p>
+        <!-- タブとタブ押下時の全体のコンテンツ -->
+        <div class="tab_wrapper">
+          <div class="tab_list">
+            <button class="tab_btn is-active" data-tab="news">軽　作　業</button>
+            <button class="tab_btn" data-tab="press">ＩＴ作業</button>
+            <span class="tab_line"></span>
+          </div>
 
-    <!-- PAGE HERO -->
-    <div class="page-hero">
-      <div class="hero-deco hero-deco-1"></div>
-      <div class="hero-deco hero-deco-2"></div>
-      <div class="page-hero-label">WORK CONTENT</div>
-      <h1>作業内容</h1>
-      <p class="page-hero-sub">
-        リンクワークス仙台駅前では、IT作業と経営作業の２つの柱で<br />
-        あなたの「働きたい」を応援しています。
-      </p>
-    </div>
-
-    <!-- SECTION: PHILOSOPHY -->
-    <section class="philosophy" id="philosophy">
-      <div class="inner">
-        <div class="sec-label">PHILOSOPHY</div>
-        <h2 class="sec-title">私たちが大切にしている価値観</h2>
-
-        <div class="phil-message">
-          <p class="phil-catch">あなたに向いてる、未来の<br />トビラ。</p>
-          <p>私たちにできることは、<br />あなたのための明日を、未来を用意すること。<br />それはとてもシンプルなこと。</p>
-          <p>人によって<br />「やりたいこと」「できること」「向いていること」<br />が違うから、例えば<br />「やりたいことに出会えるまで」<br />「できることが増えるまで」<br />「向いていることが見つかるまで」<br />それをサポートするということ。</p>
-          <p>世の中にはたくさんの仕事があって、<br />たくさんのトビラがあるのだから、<br />あなたが嬉しいと思える場所や時間、<br />未来につながるトビラだって絶対ある。<br />それを私たちが、一緒に探します。</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 3: WORKS -->
-    <section class="works" id="works">
-      <div class="inner">
-        <div class="sec-label">OUR WORKS</div>
-        <h2 class="sec-title">作業の内容</h2>
-        <p class="sec-desc">
-          リンクワークス仙台駅前では大きく分けて２種類の作業があります。<br />
-          ご自身の興味や体調に合わせて、自分に合った働き方を選べます。
-        </p>
-
-        <!-- タブボタン -->
-        <div class="tabs" role="tablist">
-          <button class="tab-btn active" role="tab" data-tab="it">Ｉ Ｔ 作 業</button>
-          <button class="tab-btn" role="tab" data-tab="light">軽　作　業</button>
-        </div>
-
-        <!-- IT作業 パネル -->
-        <div class="tab-panel active" id="panel-it">
-          <div class="work-row">
-            <div class="work-img-wrap">
-              <!-- ★ IT作業の画像をここに差し替えてください -->
-              <a href="it_works.html">
-                <img src="img/デスク風景.png" class="work-img" alt="IT作業の様子" />
-              </a>
-            </div>
-            <div class="work-info">
-              <h3>IT作業</h3>
-              <p>パソコンを使ったデジタルワークです。初めての方でも基礎から丁寧にお教えします。スキルを身につけながら働けるので、将来の就職にも活かせます。</p>
-              <div class="work-tags">
-                <span class="work-tag">ホームページ制作</span>
-                <span class="work-tag">WordPress運用</span>
-                <span class="work-tag">AI活用サポート</span>
+          <!-- タブが切り替えられた時 -->
+          <div class="tab_content is-show" data-content="news">
+            <img class="tab_img" src="img/軽作業作業風景_l.jpg" alt="軽作業の様子" />
+            <div class="tab_detail">
+              <p class="tab_title">軽作業</p>
+              <p class="tab_description">体を動かしながら、集中して取り組む作業です。手先を使う仕事が好きな方、コツコツ集中することが得意な方に向いています。難しいスキルは必要ありません。</p>
+              <div class="tab_tags">
+                <span class="tab_tag">封入・梱包作業</span>
+                <span class="tab_tag">仕分け・ピッキング</span>
+                <span class="tab_tag">シール貼り</span>
+                <span class="tab_tag">組み立て作業</span>
+                <span class="tab_tag">検品・数量確認</span>
               </div>
-              <div class="work-points">
-                <div class="work-points-title">この作業のポイント</div>
-                <ul class="work-points-list">
-                  <li>未経験からでもスタート可能</li>
-                  <li>研修があるから安心</li>
-                  <li>スキルが将来の武器になる</li>
-                  <li>自分のペースで取り組める</li>
+              <div class="tab_point">
+                <p class="tab_point_title">この作業のポイント</p>
+                <ul class="tab_point_list">
+                  <li class="tab_point_item">特別なスキルは不要</li>
+                  <li class="tab_point_item">体を動かしながら働ける</li>
+                  <li class="tab_point_item">達成感を得やすい</li>
+                  <li class="tab_point_item">チームで協力して取り組む</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="tab_content" data-content="press">
+            <img class="tab_img" src="img/IT作業風景.jpg" alt="IT作業の様子" />
+            <div class="tab_detail">
+              <p class="tab_title">IT作業</p>
+              <p class="tab_description">パソコンを使ったデジタルワークです。初めての方でも基礎から丁寧にお教えします。スキルを身につけながら働けるので、将来の就職にも活かせます。</p>
+              <div class="tab_tags">
+                <span class="tab_tag">ホームページ制作</span>
+                <span class="tab_tag">WordPress運用</span>
+                <span class="tab_tag">AI活用サポート</span>
+              </div>
+              <div class="tab_point">
+                <p class="tab_point_title">この作業のポイント</p>
+                <ul class="tab_point_list">
+                  <li class="tab_point_item">未経験からでもスタート可能</li>
+                  <li class="tab_point_item">研修があるから安心</li>
+                  <li class="tab_point_item">スキルが将来の武器になる</li>
+                  <li class="tab_point_item">自分のペースで取り組める</li>
                 </ul>
               </div>
             </div>
           </div>
         </div>
-
-        <!-- 軽作業 パネル -->
-        <div class="tab-panel" id="panel-light">
-          <div class="work-row">
-            <div class="work-img-wrap">
-              <img class="work-img" src="img/軽作業作業風景_l.jpg" alt="軽作業の様子" />
-            </div>
-            <div class="work-info">
-              <h3>軽作業</h3>
-              <p>体を動かしながら、集中して取り組める作業です。手先を使う仕事が好きな方、コツコツと丁寧な作業が得意な方に向いています。難しいスキルは必要ありません。</p>
-              <div class="work-tags">
-                <span class="work-tag">封入・梱包作業</span>
-                <span class="work-tag">仕分け・ピッキング</span>
-                <span class="work-tag">シール貼り</span>
-                <span class="work-tag">組み立て作業</span>
-                <span class="work-tag">検品・数量確認</span>
-              </div>
-              <div class="work-points">
-                <div class="work-points-title">この作業のポイント</div>
-                <ul class="work-points-list">
-                  <li>特別なスキルは不要</li>
-                  <li>体を動かしながら働ける</li>
-                  <li>達成感を得やすい</li>
-                  <li>チームで協力して取り組む</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 詳細リンク 吹き出し -->
-      <div class="works-balloon">
-        <a href="it_works.html" class="balloon-btn">詳しい内容についてはここをクリックしてください。</a>
-      </div>
-    </section>
-
-
-    <!-- FOOTER -->
-    <footer>
-      <div class="footer-logo">リンクワークス仙台駅前</div>
-      <p>
-        就労継続支援A型事業所<br />
-        〒000-0000 ○○県○○市○○町 1-2-3<br />
-        TEL: 000-000-0000 ／ 受付時間 平日 9:00〜17:00
-      </p>
-      <p class="footer-copy">© 2025 リンクワークス仙台駅前 All rights reserved.</p>
-    </footer>
-
-    <script src="js/works_script.js"></script>
+        <a class="works_tab_button" href="">詳しい内容についてはここをクリックしてください。</a>
+      </section>
+    </main>
+    <script src="js/script.js"></script>
   </body>
 </html>

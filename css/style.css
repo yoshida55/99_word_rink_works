@@ -1,0 +1,46 @@
+/*
+Theme Name: 
+*/
+
+html {
+  font-size: calc(10 / 1400 * 100vw);
+  /* 画面幅1400pxで10px*/
+}
+:root {
+}
+/* 
+Regular 400
+Medium 500
+SemiBold 600
+Bold 700
+ExtraBold 800
+*/
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.sp_only {
+  display: none;
+}
+/* <!-- メインビジュアルここから --> */
+.ar_main_img {
+  height: 37rem;
+  object-fit: cover;
+}
+/* <!-- メインビジュアルここまで --> */
+@media screen and (max-width: 699.98px) {
+  html {
+    font-size: calc(10 / 375 * 100vw);
+    /* 画面幅375pxで10px*/
+  }
+  /* <!-- メインビジュアルここから --> */
+  .ar_main_img {
+    margin-top: 8rem;
+    height: 15rem;
+  }
+  /* <!-- メインビジュアルここまで --> */
+  .sp_only {
+    display: block;
+  }
+}
