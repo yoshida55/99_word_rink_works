@@ -33,6 +33,19 @@ body {
   border-radius: 2rem;
 }
 
+.fade-up-el {
+  opacity: 0;
+  transform: translateY(-4rem);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+.fade-up-el.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* コンテンツパネル（右） */
 .hero_content {
   position: absolute;
@@ -44,7 +57,7 @@ body {
   color: white;
 
   padding: 3rem 4rem 2rem 2rem;
-  background-color: blue;
+  background-color: #0098de;
 }
 
 /* └ ラベル */
@@ -75,7 +88,7 @@ body {
    │ OVERVIEW                                │
    └─────────────────────────────────────────┘ */
 
-/* 概要【flex 横2列: テキスト側 + 画像側】 */
+/* 概要セクション */
 .overview_area {
   display: flex;
   width: 70%;
@@ -157,7 +170,7 @@ body {
   margin-bottom: 2rem;
 }
 
-/* カードラッパー【flex 横3列: カード】 */
+/* カードラッパー */
 .service_wrapper {
   display: flex;
   justify-content: space-between;
@@ -199,8 +212,7 @@ body {
 
 /* カード説明文 */
 .service_item_description {
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding: 0 2rem;
   margin-bottom: 2rem;
 }
 
@@ -219,7 +231,7 @@ body {
    └─────────────────────────────────────────┘ */
 
 /* 一日の流れ　CTAエリア */
-.service_area {
+._xxx {
   padding: var(--section-margin) var(--side-width);
 
   background-color: #1c2c33;
