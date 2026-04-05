@@ -1,12 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap");
+
 :root {
-  --side-width: 25rem;
+  --side-width: 20rem;
   --section-margin: 12rem; /* タイトルの上のラベル */
-  --font-color: #5a7a8e;
+  --font-color: #1e3a4a;
   --cream: #f5f9fb; /* デフォルトの背景 */
 }
 
 body {
-  font-family: "Zen Kaku Gothic New", "Hiragino Sans", sans-serif;
+  font-family: "Klee One", "Hiragino Sans", sans-serif;
+  font-weight: 600;
   color: var(--font-color);
   background: var(--cream);
   line-height: 1.6;
@@ -21,7 +24,7 @@ body {
 /* メインビジュアル全体（画像＋パネル重ね） */
 .hero_area {
   position: relative;
-  padding: 5rem 0 0 1rem;
+  padding: 10rem 0 0 1rem;
   margin-bottom: var(--section-margin);
 }
 
@@ -34,7 +37,7 @@ body {
 }
 
 .fade-up-el {
-  opacity: 0;
+  opacity: 1;
   transform: translateY(-4rem);
   transition:
     opacity 0.6s ease,
@@ -196,7 +199,7 @@ body {
 /* カード画像 */
 .service_img {
   width: 100%;
-  height: 20rem;
+  height: 30rem;
   object-fit: cover;
   border-radius: 1rem;
   margin-bottom: 3rem;

@@ -10,7 +10,8 @@
       "Bash(\"D:/50_knowledge/01_memo.md\":*)",
       "Bash(curl -s -X POST http://127.0.0.1:3848/highlight-line -H \"Content-Type: application/json\" --data-binary \"{\"\"filePath\"\": \"\"D:/50_knowledge/01_memo.md\"\", \"\"lineNumber\"\": 18741}\")",
       "Edit(~/.claude/skills/auto-class/**)",
-      "Edit(~/.claude/skills/auto-skeleton/**)"
+      "Edit(~/.claude/skills/auto-skeleton/**)",
+      "WebFetch(domain:cocopia-works.jp)"
     ],
     "additionalDirectories": [
       "C:\\Users\\sensh\\.claude\\skills"
