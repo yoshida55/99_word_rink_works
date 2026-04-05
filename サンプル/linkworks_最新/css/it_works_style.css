@@ -320,14 +320,53 @@ nav a:hover { color: var(--blue-main); }
   display: block;
 }
 
-/* ── SERVICES: 画像カードグリッド ── */
+/* ── SERVICES: 画像カードグリッド（クリーム背景・やわらかトーン） ── */
 .services {
+  position: relative;
   padding: 5rem 2rem 9rem;
-  background: var(--blue-deep);
+  background:
+    linear-gradient(180deg, var(--cream) 0%, #e2edf4 40%, #c8d9e6 100%);
+  overflow: hidden;
+}
+
+/* 背景画像を中央に配置（楕円フェードで自然に馴染ませる） */
+.services::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 1000px;
+  aspect-ratio: 16 / 9;
+  background: url("../img/作業内容背景画像(ココア)_03.png") center/cover no-repeat;
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 0;
+  -webkit-mask-image: radial-gradient(ellipse 50% 45% at 50% 50%, #000 20%, transparent 70%);
+          mask-image: radial-gradient(ellipse 50% 45% at 50% 50%, #000 20%, transparent 70%);
+}
+
+/* 左側にも淡いブルーのほんのりした光 */
+.services::after {
+  content: "";
+  position: absolute;
+  left: -10%;
+  top: 10%;
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(124, 186, 212, 0.18) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.services .inner {
+  position: relative;
+  z-index: 1;
 }
 
 .services .sec-label {
-  color: var(--blue-light);
+  color: var(--blue-mid);
   justify-content: flex-start;
   margin-bottom: 1rem;
 }
@@ -341,12 +380,12 @@ nav a:hover { color: var(--blue-main); }
 }
 
 .services .sec-title {
-  color: var(--white);
+  color: var(--blue-deep);
   text-align: left;
 }
 
 .services .sec-desc {
-  color: rgba(255, 255, 255, 0.55);
+  color: var(--text-sub);
   text-align: left;
   margin: 0 0 2.5rem;
 }
@@ -370,16 +409,19 @@ nav a:hover { color: var(--blue-main); }
 }
 
 .service-card {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(208, 232, 242, 0.7);
   border-radius: var(--radius-lg);
   overflow: hidden;
   transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 6px 20px rgba(27, 58, 79, 0.08);
 }
 
 .service-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 16px 40px rgba(27, 58, 79, 0.12);
 }
 
 .card-img-wrap {
@@ -406,9 +448,9 @@ nav a:hover { color: var(--blue-main); }
   font-family: "Noto Serif JP", serif;
   font-size: 2rem;
   font-weight: 300;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.95);
   line-height: 1;
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
 }
 
 .card-body {
@@ -419,13 +461,13 @@ nav a:hover { color: var(--blue-main); }
   font-family: "Noto Serif JP", serif;
   font-size: 1.3rem;
   font-weight: 500;
-  color: var(--white);
+  color: var(--blue-deep);
   margin-bottom: 0.8rem;
 }
 
 .card-body p {
   font-size: 0.86rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--text-sub);
   line-height: 2.1;
   margin-bottom: 1.4rem;
 }
@@ -439,7 +481,7 @@ nav a:hover { color: var(--blue-main); }
 
 .card-list li {
   font-size: 0.75rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--text-sub);
   display: flex;
   align-items: baseline;
   gap: 0.45rem;
@@ -455,6 +497,33 @@ nav a:hover { color: var(--blue-main); }
   flex-shrink: 0;
   margin-top: 0.55em;
 }
+
+/* ひとことノート（罫線つき・中央） */
+.services-note {
+  text-align: center;
+  margin-top: 3.5rem;
+}
+
+.services-note span {
+  font-size: 0.92rem;
+  color: var(--text-sub);
+  position: relative;
+  display: inline-block;
+  padding: 0 1.4rem;
+}
+
+.services-note span::before,
+.services-note span::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 1rem;
+  height: 1px;
+  background: var(--blue-mid);
+}
+
+.services-note span::before { left: 0; }
+.services-note span::after { right: 0; }
 
 /* ── SCHEDULE + CTA ── */
 .schedule {
@@ -671,10 +740,12 @@ footer p { font-size: 0.76rem; line-height: 2; }
     grid-template-columns: 1fr;
   }
 
+
   .service-grid .service-card:nth-child(2),
   .service-grid .service-card:nth-child(3) {
     margin-top: 0;
   }
+
 }
 
 @media (max-width: 720px) {
