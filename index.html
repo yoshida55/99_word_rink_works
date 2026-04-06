@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/works.css" />
   </head>
   <body>
-    <header> </header>
+    <header></header>
     <main>
       <!-- ===============================================
        作業内容 メインビジュアル
@@ -18,7 +18,7 @@
         <div class="hero_deco right"></div>
         <div class="hero_deco left"></div>
         <span class="work_label">WORK CONTENT</span>
-        <h2 class="works_title">作業内容</h2>
+        <h1 class="works_title">作業内容</h1>
         <p class="works_description">リンクワークス仙台駅前では、IT作業と経営作業の２つの柱で<br />あなたの「働きたい」を応援しています。</p>
       </section>
       <!-- ===============================================
@@ -38,58 +38,45 @@
       <section class="works_tab_area">
         <span class="section_label">OUR WORKS</span>
         <h2 class="section_title">作業の内容</h2>
-        <p class="works_tab_description">リンクワークス仙台駅前では大きく分けて２種類の作業があります。 <br />ご自身の興味や体調に合わせて、自分に合った働き方を選べます。</p>
-        <!-- タブとタブ押下時の全体のコンテンツ -->
-        <div class="tab_wrapper">
-          <div class="tab_list">
-            <button class="tab_btn is-active" data-tab="news">軽　作　業</button>
-            <button class="tab_btn" data-tab="press">ＩＴ作業</button>
-            <span class="tab_line"></span>
-          </div>
+        <p class="works_tab_description">リンクワークス仙台駅前では大きく分けて２種類の作業があります。<br />ご自身の興味や体調に合わせて、自分に合った働き方を選べます。</p>
 
-          <!-- タブが切り替えられた時 -->
-          <div class="tab_content is-show" data-content="news">
-            <img class="tab_img" src="img/軽作業作業風景_l.jpg" alt="軽作業の様子" />
-            <div class="tab_detail">
-              <p class="tab_title">軽作業</p>
-              <p class="tab_description">体を動かしながら、集中して取り組む作業です。手先を使う仕事が好きな方、コツコツ集中することが得意な方に向いています。難しいスキルは必要ありません。</p>
-              <div class="tab_tags">
-                <span class="tab_tag">封入・梱包作業</span>
-                <span class="tab_tag">仕分け・ピッキング</span>
-                <span class="tab_tag">シール貼り</span>
-                <span class="tab_tag">組み立て作業</span>
-                <span class="tab_tag">検品・数量確認</span>
-              </div>
-              <div class="tab_point">
-                <p class="tab_point_title">この作業のポイント</p>
-                <ul class="tab_point_list">
-                  <li class="tab_point_item">特別なスキルは不要</li>
-                  <li class="tab_point_item">体を動かしながら働ける</li>
-                  <li class="tab_point_item">達成感を得やすい</li>
-                  <li class="tab_point_item">チームで協力して取り組む</li>
-                </ul>
+        <!-- タブとタブ押下時の全体のコンテンツ -->
+        <div class="tabs">
+          <input id="all" type="radio" name="tab_item" checked />
+          <label class="tab_item" for="all">東口（軽作業）</label>
+          <input id="programming" type="radio" name="tab_item" />
+          <label class="tab_item" for="programming">仙台駅前（IT作業）</label>
+          <div class="tab_content" id="all_content">
+            <div class="tab_content_description">
+              <!-- flexboxを使用して、タブの内容を横並びに配置 -->
+              <div class="works_content">
+                <img class="works_image" src="img/軽作業作業風景_l.jpg" alt="軽作業の作業風景" />
+                <div class="works_content_text">
+                  <p class="works_tab_title">軽作業</p>
+                  <p class="works_tab_description">東口（軽作業）の内容がここに入ります</p>
+                  <div class="works_tab_wrapper">
+                    <span class="works_tab_item" href="light_works.html">封入・梱包作業</span>
+                    <span class="works_tab_item" href="light_works.html"> 仕分け・ピッキング</span>
+                    <span class="works_tab_item" href="light_works.html">組み立て作業</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="tab_content" data-content="press">
-            <img class="tab_img" src="img/IT作業風景.jpg" alt="IT作業の様子" />
-            <div class="tab_detail">
-              <p class="tab_title">IT作業</p>
-              <p class="tab_description">パソコンを使ったデジタルワークです。初めての方でも基礎から丁寧にお教えします。スキルを身につけながら働けるので、将来の就職にも活かせます。</p>
-              <div class="tab_tags">
-                <span class="tab_tag">ホームページ制作</span>
-                <span class="tab_tag">WordPress運用</span>
-                <span class="tab_tag">AI活用サポート</span>
+          <div class="tab_content" id="programming_content">
+            <div class="tab_content_description">
+              <div class="works_content">
+                <img class="works_image" src="img/IT作業作業風景_l.jpg" alt="IT作業の作業風景" />
+                <div>
+                  <p class="works_tab_title">IT作業</p>
+                  <p class="works_tab_description">仙台駅前（IT作業）の内容がここに入ります</p>
+                </div>
               </div>
-              <div class="tab_point">
-                <p class="tab_point_title">この作業のポイント</p>
-                <ul class="tab_point_list">
-                  <li class="tab_point_item">未経験からでもスタート可能</li>
-                  <li class="tab_point_item">研修があるから安心</li>
-                  <li class="tab_point_item">スキルが将来の武器になる</li>
-                  <li class="tab_point_item">自分のペースで取り組める</li>
-                </ul>
-              </div>
+            </div>
+          </div>
+          <div class="tab_content" id="design_content">
+            <div class="tab_content_description">
+              <p class="c-txtsp">デザインの内容がここに入ります</p>
             </div>
           </div>
         </div>

@@ -1,14 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap");
 
 :root {
-  --side-width: 35rem;
+  --side-width: 10rem;
   --sect-label-font-size: 1.2rem; /* タイトルの上のラベル */
   --font-color: #1e3a4a;
   --cream: #f5f9fb; /* デフォルトの背景 */
+  --label-color: #4a95b5; /* タイトルの上のラベルの色 */
 }
 
 body {
-  font-family: "Klee One", "Hiragino Sans", sans-serif;
   font-weight: 1000;
   color: var(--font-color);
   background: var(--cream);
@@ -49,7 +49,8 @@ body {
 
   margin: 0 auto;
 
-  color: black;
+  color: var(--label-color);
+
   outline: 0.1rem solid #4a95b5;
   border-radius: 100px;
 }
@@ -57,7 +58,6 @@ body {
 /* タイトル（作業内容） */
 .works_title {
   text-align: center;
-  font-size: 7rem;
   letter-spacing: 0.3rem;
 }
 
@@ -115,7 +115,7 @@ body {
   width: fit-content;
   font-size: var(--sect-label-font-size);
   letter-spacing: 0.4rem;
-  color: black;
+  color: var(--label-color);
   position: relative;
   margin: 0 auto;
 }
@@ -142,14 +142,13 @@ body {
 
 /* タイトル（私たちが大切にしている価値観） */
 .section_title {
-  font-size: 4rem;
   letter-spacing: 0.15rem;
   margin-top: 1.5rem;
 }
 
 /* キャッチコピー（大きな文字） */
 .philosophy_catch {
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 400;
   margin-top: 3rem;
   line-height: 1.35;
@@ -168,7 +167,6 @@ body {
 
 /* セクション外枠 */
 .works_tab_area {
-  padding: 0 15rem;
   text-align: center;
 }
 
@@ -181,115 +179,65 @@ body {
 
 /* セクション説明文 */
 .works_tab_description {
-  padding: 2rem 18rem 0;
+  padding-top: 2rem;
+  margin-bottom: 3rem;
 }
 
-/* タブ全体ラッパー */
-.tab_wrapper {
-}
-
-.tab_list {
-  padding-top: 7rem;
-  width: fit-content;
+/*タブ切り替え全体のスタイル*/
+.tabs {
+  margin-top: 0;
+  padding-bottom: 40px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
   margin: 0 auto;
-  position: relative; /* 線の基準点 */
-  display: flex;
-  border-bottom: 1px solid #ccc;
+  border-radius: 2rem;
 }
 
-.tab_btn {
-  padding: 1.2rem 6rem;
-  background: transparent;
-
-  cursor: pointer;
-  font-size: 14px;
+/*タブのスタイル*/
+.tab_item {
+  width: calc(100% / 2);
+  height: 50px;
+  border-bottom: 3px solid #5ab4bd;
+  background-color: #d9d9d9;
+  line-height: 50px;
+  font-size: 16px;
+  text-align: center;
+  color: #565656;
+  display: block;
+  float: left;
+  text-align: center;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+.tab_item:hover {
+  opacity: 0.75;
 }
 
-/* 動く線 */
-.tab_line {
-  position: absolute;
-  bottom: 0;
-  height: 2px;
-  background: #000;
-  transition:
-    left 0.3s ease,
-    width 0.3s ease;
-}
-
-/* アクティブ状態 */
-.tab_btn.is-active {
-}
-
-/* タブコンテンツ（非表示がデフォルト） */
-.tab_content {
-  padding-top: 5rem;
+/*ラジオボタンを全て消す*/
+input[name="tab_item"] {
   display: none;
 }
 
-/* タブコンテンツ（表示状態）【flex 横2列: 画像 + 詳細】 */
-.tab_content.is-show {
-  display: flex;
-  gap: 4rem;
+/*タブ切り替えの中身のスタイル*/
+.tab_content {
+  display: none;
+  padding: 40px 40px 0;
+  clear: both;
+  overflow: hidden;
 }
 
-/* └ 作業画像（左） */
-.tab_img {
-  width: calc((100% - 4rem) / 2);
-
-  height: auto;
-  border-radius: 20px;
-  margin-top: 1.5rem;
+/*選択されているタブのコンテンツのみを表示*/
+#all:checked ~ #all_content,
+#programming:checked ~ #programming_content,
+#design:checked ~ #design_content {
+  display: block;
 }
 
-/* └ テキスト詳細側（右） */
-.tab_detail {
-  width: calc((100% - 4rem) / 2);
-  text-align: left;
-}
-
-/* 作業タイトル */
-.tab_title {
-  padding-bottom: 2rem;
-  font-size: 2.5rem;
-}
-
-/* 作業説明文 */
-.tab_description {
-  padding-bottom: 2rem;
-}
-
-/* タグ群,【flex 横並び・折り返しあり】 */
-.tab_tags {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 1rem;
-  flex-wrap: wrap;
-}
-
-/* └ タグ1つ */
-.tab_tag {
-  border-radius: 100px;
-  background-color: #d0e8f2;
-
-  padding: 0.5rem 1rem;
-  outline: 1px solid #ccc;
-  color: #1b3a4f;
-}
-
-/* ポイントリスト【grid 2列】 */
-.tab_point_list {
-  padding-left: 2rem;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0.1rem 2rem;
-  list-style: disc;
-}
-
-/* ポイントボックス */
-.tab_point {
-  padding: 2rem;
-  background-color: rgb(211, 241, 241);
-  border-radius: 2rem;
+/*選択されているタブのスタイルを変える*/
+.tabs input:checked + .tab_item {
+  background-color: #5ab4bd;
+  color: #fff;
 }
 
 .works_tab_button {
@@ -315,4 +263,46 @@ body {
   clip-path: polygon(50% 0, 100% 100%, 0 100%);
 
   background-color: #4a95b5;
+}
+
+/* ┌─────────────────────────────────────────┐
+   │ タブの内容                        │
+   └─────────────────────────────────────────┘ */
+
+.works_content {
+  height: 30rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.works_image {
+  width: 50%;
+}
+
+.works_content_text {
+  padding-left: 2rem;
+  width: 50%;
+  text-align: left;
+}
+
+.works_tab_title {
+  margin-top: 0;
+  font-weight: normal;
+}
+
+.works_tab_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.works_tab_item {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  font-weight: normal;
+  background-color: #4a95b5;
+  color: white;
+  border-radius: 100px;
+  margin: 0.5rem;
 }
