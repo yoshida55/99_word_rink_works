@@ -47,9 +47,9 @@ body {
 /* コンテンツパネル（右） */
 .hero_content {
   position: absolute;
-  top: 10rem;
+  top: 9rem;
   right: 0;
-  width: 48%;
+  width: 55%;
   height: 40rem;
 
   color: white;
