@@ -123,7 +123,8 @@ body {
 
 /* タイトル */
 .overview_title {
-  font-size: 4rem;
+  font-size: 3rem;
+  font-weight: 400;
   text-decoration: underline;
   text-underline-offset: 1rem;
   text-decoration-thickness: 0.1rem;
@@ -137,7 +138,7 @@ body {
 
 /* └ 画像側（右） */
 .overview_img {
-  margin-top: 8rem;
+  margin-top: 6rem;
   width: 45%;
   height: 30rem;
   object-fit: cover;
@@ -152,6 +153,7 @@ body {
   height: 40rem;
   object-fit: cover;
   margin: 0 auto;
+  border-radius: 1rem;
 }
 
 /* ┌─────────────────────────────────────────┐
@@ -218,6 +220,7 @@ body {
 
 /* カードタイトル */
 .service_item_title {
+  font-family: "Zen Maru Gothic", sans-serif;
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 1rem;

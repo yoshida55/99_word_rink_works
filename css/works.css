@@ -52,12 +52,11 @@ body {
   font-family: "Noto Serif JP", serif;
   text-align: center;
   letter-spacing: 0.3rem;
-  font-size: 5.5rem;
+  font-size: 6rem;
 }
 
 /* 説明文 */
 .works_description {
-  font-family: "Noto Serif JP", serif;
   text-align: center;
   margin-top: 1rem;
 }
@@ -68,7 +67,7 @@ body {
 
   outline: 1rem solid blue;
   border-radius: 50%; /* 丸にする */
-  opacity: 0.07; /* かなり薄く */
+  opacity: 0.02;
   background-color: blue;
 }
 
@@ -77,8 +76,8 @@ body {
   width: 50rem;
   height: 50rem;
 
-  top: -15rem;
-  right: -15rem;
+  top: -25rem;
+  right: -25rem;
 }
 
 /* 左下の丸 */
@@ -110,8 +109,8 @@ body {
 /* └ 鳥イラスト（右下セクションの中央あたりでふわふわ） */
 .philosophy_bird {
   position: absolute;
-  bottom: 25%;
-  left: 12rem;
+  top: 18rem;
+  right: 8rem;
   width: 12rem;
   height: auto;
   pointer-events: none;
@@ -201,6 +200,11 @@ body {
   background-color: var(--label-color);
 }
 
+.section_label::before,
+.section_label::after {
+  opacity: 0.2;
+}
+
 /* タイトル（私たちが大切にしている価値観） */
 .section_title {
   letter-spacing: 0.15rem;
@@ -214,12 +218,15 @@ body {
   margin-top: 3rem;
   line-height: 1.35;
   letter-spacing: 0.2rem;
+  color: #2a8a9a;
 }
 
 /* 説明文（） */
 .philosophy_description {
-  margin-top: 4rem;
+  margin-top: 3rem;
   line-height: 2.2;
+  text-align: left;
+  padding: 0 8rem;
 }
 
 /* ┌─────────────────────────────────────────┐
@@ -233,7 +240,7 @@ body {
 
 /* セクションタイトル */
 .works_tab_title {
-  font-size: 4rem;
+  font-family: "Zen Maru Gothic", sans-serif;
   letter-spacing: 0.15rem;
   margin-top: 1.5rem;
 }
@@ -249,7 +256,7 @@ body {
   margin-top: 0;
   padding-bottom: 40px;
   background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
   width: 100%;
   margin: 0 auto;
   border-radius: 2rem;
@@ -261,7 +268,7 @@ body {
   width: calc(100% / 2);
   height: 50px;
   border-bottom: 3px solid #5ab4bd;
-  background-color: #d9d9d9;
+  background-color: #e8f4f8;
   line-height: 50px;
   font-size: 16px;
   text-align: center;
@@ -306,14 +313,13 @@ input[name="tab_item"] {
 
 .works_tab_button {
   display: inline-block;
-  margin-top: 4rem;
+  margin-top: 5rem;
   padding: 1rem 2rem;
   background-color: #4a95b5;
   color: white;
   border-radius: 100px;
   position: relative;
-  margin-bottom: 1rem;
-  font-size: 1.2rem;
+  margin-bottom: 3rem;
   font-weight: normal;
 }
 
@@ -346,6 +352,7 @@ input[name="tab_item"] {
 .works_image {
   width: 50%;
   cursor: pointer;
+  border-radius: 1rem;
 }
 
 .works_content_text {
@@ -362,14 +369,15 @@ input[name="tab_item"] {
 .works_tab_wrapper {
   display: flex;
   flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .works_tab_item {
   padding: 1rem 2rem;
   font-size: 1.2rem;
   font-weight: normal;
-  background-color: #4a95b5;
-  color: white;
+  background-color: transparent;
+  color: #4a95b5;
+  border: 1px solid #4a95b5;
   border-radius: 100px;
-  margin: 0.5rem;
 }
