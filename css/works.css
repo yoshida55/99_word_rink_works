@@ -49,12 +49,15 @@ body {
 
 /* タイトル（作業内容） */
 .works_title {
+  font-family: "Noto Serif JP", serif;
   text-align: center;
   letter-spacing: 0.3rem;
+  font-size: 5.5rem;
 }
 
 /* 説明文 */
 .works_description {
+  font-family: "Noto Serif JP", serif;
   text-align: center;
   margin-top: 1rem;
 }
@@ -101,6 +104,72 @@ body {
   margin-top: -10rem; /* 上のセクションと重ねる */
   position: relative;
   z-index: 5;
+  overflow: hidden;
+}
+
+/* └ 鳥イラスト（右下セクションの中央あたりでふわふわ） */
+.philosophy_bird {
+  position: absolute;
+  bottom: 25%;
+  left: 12rem;
+  width: 12rem;
+  height: auto;
+  pointer-events: none;
+  z-index: 1;
+  animation: philosophy_float 4s ease-in-out infinite;
+}
+
+/* └ 雲イラスト（背景装飾） */
+.philosophy_cloud {
+  position: absolute;
+  height: auto;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.6;
+  animation: philosophy_flow 35s linear infinite;
+}
+
+.philosophy_cloud_1 {
+  top: 10%;
+  width: 20rem;
+  animation-delay: 0s;
+}
+
+.philosophy_cloud_2 {
+  top: 20rem;
+  width: 24rem;
+  animation-delay: -10s;
+}
+
+.philosophy_cloud_3 {
+  top: 40rem;
+  width: 18rem;
+  animation-delay: -20s;
+}
+
+.philosophy_cloud_4 {
+  top: 55rem;
+  width: 18rem;
+  animation-delay: -15s;
+}
+
+@keyframes philosophy_float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-1.5rem);
+  }
+}
+
+@keyframes philosophy_flow {
+  0% {
+    transform: translateX(-30rem);
+  } /* 左の画面外 */
+  100% {
+    transform: translateX(100vw);
+  } /* 右の画面外 */
 }
 
 .section_label {
@@ -184,6 +253,7 @@ body {
   width: 100%;
   margin: 0 auto;
   border-radius: 2rem;
+  background: linear-gradient(to bottom, #d0e8f2, #f5f9fb);
 }
 
 /*タブのスタイル*/
@@ -201,6 +271,7 @@ body {
   text-align: center;
   font-weight: bold;
   transition: all 0.2s ease;
+  border-radius: 2rem;
 }
 .tab_item:hover {
   opacity: 0.75;
@@ -224,6 +295,7 @@ input[name="tab_item"] {
 #programming:checked ~ #programming_content,
 #design:checked ~ #design_content {
   display: block;
+  background: linear-gradient(to bottom, #d0e8f2, #f5f9fb);
 }
 
 /*選択されているタブのスタイルを変える*/

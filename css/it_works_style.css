@@ -1,6 +1,6 @@
 :root {
   --side-width: 10rem;
-  --section-margin: 12rem; /* タイトルの上のラベル */
+  --section-margin: 9rem; /* タイトルの上のラベル */
   --font-color: #1e3a4a;
   --cream: #f5f9fb; /* デフォルトの背景 */
 }
@@ -19,14 +19,14 @@ body {
 /* メインビジュアル全体（画像＋パネル重ね） */
 .hero_area {
   position: relative;
-  padding: 10rem 0 0 1rem;
-  margin-bottom: var(--section-margin);
+  padding-top: 5rem;
+  margin-bottom: 4rem;
 }
 
 /* 背景画像（左） */
 .hero_image {
-  width: 60%;
-  height: 50rem;
+  width: 55%;
+  height: 45rem;
   object-fit: cover;
   border-radius: 2rem;
 }
@@ -47,48 +47,54 @@ body {
 /* コンテンツパネル（右） */
 .hero_content {
   position: absolute;
-  top: 9rem;
+  top: 7rem;
   right: 0;
   width: 55%;
-  height: 40rem;
+  height: 35rem;
 
   color: white;
 
   padding: 3rem 4rem 2rem 2rem;
   background-color: #0098de;
+  border-radius: 2rem;
 }
 
 /* └ ラベル */
 .main_label {
   display: block;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   margin-bottom: 3rem;
-  position: relative;
   color: #7dd4f5;
 }
 
 .main_label::after {
   content: "";
-  position: absolute;
-  top: 0.4rem;
-  left: 7rem;
-  transform: translateX(-50%);
-  display: block;
+  display: inline-block;
+
   width: 3rem;
   height: 0.1rem;
   background-color: #7dd4f5;
-  margin-top: 0.5rem;
+
+  vertical-align: middle;
+
+  margin-left: 1rem;
 }
 
 /* └ 見出し */
 .hero_title {
+  font-family: "Noto Serif JP", serif;
   font-size: 4rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
   margin-bottom: 2rem;
 }
 
 /* └ 説明文 */
 .hero_description {
   font-size: 1.6rem;
+  letter-spacing: 0.02em;
+  line-height: 1.9;
   margin-bottom: 2rem;
 }
 
@@ -104,15 +110,15 @@ body {
 /* 概要セクション */
 .overview_area {
   display: flex;
-  width: 90%;
+  width: 85%;
   margin: 0 auto;
-  gap: 5rem;
+  gap: 3rem;
   margin-bottom: var(--section-margin);
 }
 
 /* └ テキスト側（左） */
 .overview_content {
-  width: 55%;
+  width: 60%;
 }
 
 /* タイトル */
@@ -131,9 +137,9 @@ body {
 
 /* └ 画像側（右） */
 .overview_img {
-  margin-top: 2rem;
+  margin-top: 8rem;
   width: 45%;
-  height: 38rem;
+  height: 30rem;
   object-fit: cover;
   border-radius: 2rem;
 }
