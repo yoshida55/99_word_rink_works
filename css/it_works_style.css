@@ -59,10 +59,25 @@ body {
 }
 
 /* └ ラベル */
-.hero_label {
+.main_label {
   display: block;
   font-size: 1.2rem;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
+  position: relative;
+  color: #7dd4f5;
+}
+
+.main_label::after {
+  content: "";
+  position: absolute;
+  top: 0.4rem;
+  left: 7rem;
+  transform: translateX(-50%);
+  display: block;
+  width: 3rem;
+  height: 0.1rem;
+  background-color: #7dd4f5;
+  margin-top: 0.5rem;
 }
 
 /* └ 見出し */
@@ -98,12 +113,6 @@ body {
 /* └ テキスト側（左） */
 .overview_content {
   width: 55%;
-}
-
-/* ラベル */
-.overview_label {
-  display: block;
-  margin-bottom: 2rem;
 }
 
 /* タイトル */
@@ -174,12 +183,12 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 4rem;
+  gap: 2rem;
 }
 
 /* └ カード */
 .service_item {
-  width: calc((100% - 8rem) / 3);
+  width: calc((100% - 6rem) / 3);
   background-color: white;
   border-radius: 2rem;
   color: black;
@@ -229,9 +238,97 @@ body {
    │ 一日の流れ　CTA                        │
    └─────────────────────────────────────────┘ */
 
-/* 一日の流れ　CTAエリア */
-._xxx {
-  padding: var(--section-margin) var(--side-width);
+/* 一日の流れ CTAエリア【flex 横2列: タイムライン側 + CTAパネル側】 */
+.flow_area {
+  display: flex;
+  padding-: var(--section-margin) var(--side-width);
+  justify-content: center;
+  gap: 5rem;
+  margin-bottom: var(--section-margin);
+}
 
-  background-color: #1c2c33;
+/* └ タイムライン側（左） */
+.flow_content {
+  width: 40%;
+}
+
+/* タイトル */
+.flow_title {
+  text-align: center;
+}
+
+/* リード文 */
+.flow_lead {
+  margin-bottom: 2rem;
+}
+
+/* 施設内ボタン */
+.flow_button {
+  display: block;
+  padding: 0.1rem 2rem;
+  background-color: #0098de;
+  color: white;
+  border-radius: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* タイムラインリスト */
+.flow_list {
+  list-style: none;
+}
+
+/* タイムライン1行【flex 横2列: 時刻 + 作業内容】 */
+.flow_item {
+  display: flex;
+  border-bottom: 0.1rem solid red;
+  gap: 3rem;
+}
+
+.flow_item {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  border-top: 0.1rem solid red;
+  border-right: 0.1rem solid red;
+  border-left: 0.1rem solid red;
+}
+.flow_item:nth-child(odd) {
+  border-bottom: none;
+}
+
+.flow_item:nth-child(even) {
+  border-bottom: none;
+}
+
+/* └ 時刻（左） */
+.flow_time {
+  display: block;
+}
+
+/* └ 作業内容（右） */
+.flow_task {
+  display: block;
+}
+
+/* └ CTAパネル側（右） */
+.flow_cta {
+}
+
+/* CTAパネル */
+.cta_panel {
+}
+
+/* CTAタイトル */
+.cta_title {
+}
+
+/* CTA説明文 */
+.cta_description {
+}
+
+/* CTAリンク */
+.cta_link {
+  /* color: */
 }
