@@ -2,6 +2,7 @@
   --side-width: 9rem;
   --sect-label-font-size: 1.2rem; /* タイトルの上のラベル */
   --cream: #f5f9fb; /* デフォルトの背景 */
+  --main-color: var(--main-color);
 }
 
 body {
@@ -29,13 +30,13 @@ body {
 
   margin: 0 auto;
 
-  color: #4a95b5;
+  color: var(--main-color);
 
-  outline: 0.1rem solid #4a95b5;
+  outline: 0.1rem solid var(--main-color);
   border-radius: 100px;
 }
 
-/* タイトル（作業内容） */
+/* タイトル（事業所について） */
 .works_title {
   text-align: center;
   letter-spacing: 0.3rem;
@@ -63,7 +64,7 @@ body {
   width: fit-content;
   font-size: var(--sect-label-font-size);
   letter-spacing: 0.4rem;
-  color: #4a95b5;
+  color: var(--main-color);
   position: relative;
   margin: 0 auto;
 }
@@ -75,7 +76,7 @@ body {
   position: absolute;
   top: 1.3rem;
   left: -5rem;
-  background-color: #4a95b5;
+  background-color: var(--main-color);
 }
 
 .section_label::after {
@@ -85,7 +86,7 @@ body {
   position: absolute;
   top: 1.1rem;
   left: 13rem;
-  background-color: #4a95b5;
+  background-color: var(--main-color);
 }
 
 .section_label::before,
@@ -143,9 +144,9 @@ body {
 /*タブ切り替え全体のスタイル*/
 .tabs {
   margin-top: 0;
-  padding-bottom: 40px;
+  padding-bottom: 4rem;
   background-color: #fff;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.08);
   width: 100%;
   margin: 0 auto;
   border-radius: 2rem;
@@ -154,19 +155,19 @@ body {
 
 /*タブのスタイル*/
 .tab_item {
-  width: calc(100% / 2);
-  height: 50px;
-  border-bottom: 3px solid #5ab4bd;
-  background-color: #e8f4f8;
-  line-height: 50px;
-  font-size: 16px;
-  color: #565656;
   display: block;
   float: left;
-  text-align: center;
-  font-weight: bold;
-  transition: all 0.2s ease;
+  width: calc(100% / 2);
+  height: 5rem;
+  border-bottom: 0.3rem solid #5ab4bd;
   border-radius: 2rem;
+  background-color: #e8f4f8;
+  font-size: 1.6rem;
+  font-weight: bold;
+  line-height: 5rem;
+  color: #565656;
+  text-align: center;
+  transition: all 0.2s ease;
 }
 .tab_item:hover {
   opacity: 0.75;
@@ -180,7 +181,7 @@ input[name="tab_item"] {
 /*タブ切り替えの中身のスタイル*/
 .tab_content {
   display: none;
-  padding: 40px 40px 0;
+  padding: 4rem 4rem 0;
   clear: both;
   overflow: hidden;
 }
@@ -203,7 +204,7 @@ input[name="tab_item"] {
   display: inline-block;
   margin-top: 5rem;
   padding: 1rem 2rem;
-  background-color: #4a95b5;
+  background-color: var(--main-color);
   color: white;
   border-radius: 100px;
   position: relative;
@@ -222,7 +223,7 @@ input[name="tab_item"] {
   transform: translateX(-50%);
   clip-path: polygon(50% 0, 100% 100%, 0 100%);
 
-  background-color: #4a95b5;
+  background-color: var(--main-color);
 }
 
 /* ┌─────────────────────────────────────────┐
@@ -263,8 +264,8 @@ input[name="tab_item"] {
   font-size: 1.2rem;
   font-weight: normal;
   background-color: rgba(74, 149, 181, 0.15);
-  color: #4a95b5;
-  border: 1px solid #4a95b5;
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
   border-radius: 100px;
 }
 
@@ -284,12 +285,23 @@ input[name="tab_item"] {
   body {
     line-height: 1.4;
   }
-  /* ============================================================
-   作業内容 メインビジュアル
-============================================================ */
+
+  /* ┌─────────────────────────────────────────┐
+   │ 作業内容 メインビジュアル                        │
+   └─────────────────────────────────────────┘ */
+  /* セクションラベル */
+  .work_label {
+    margin: 0 auto 2rem;
+  }
+
   .works_area {
     padding: 3rem 0 5rem 0;
     margin-bottom: 3rem;
+  }
+
+  /* タイトル（事業所について） */
+  .works_title {
+    font-size: 4rem;
   }
 
   /* ┌─────────────────────────────────────────┐
@@ -310,23 +322,20 @@ input[name="tab_item"] {
   .philosophy_description {
     line-height: 1.8;
     text-align: center;
+    padding: 0 5rem;
   }
 
   /* ┌─────────────────────────────────────────┐
-   │ 作業内容（タブセクション）               │
-   └─────────────────────────────────────────┘ */
-  .works_content {
-    height: 20rem;
+     │ 作業の内容                        │
+     └─────────────────────────────────────────┘ */
+
+  /*タブ切り替えの中身のスタイル*/
+  .tab_content {
+    padding: 2rem 2rem 0;
   }
 
-  /* セクション説明文 */
-  .works_tab_description {
-    padding-top: 1rem;
-    margin-bottom: 2rem;
-  }
-
-  .works_tab_item {
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
+  .works_image {
+    height: 19rem;
+    width: 19rem;
   }
 }

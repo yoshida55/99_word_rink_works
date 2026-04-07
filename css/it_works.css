@@ -1,6 +1,6 @@
 :root {
   --side-width: 5rem;
-  --section-margin: 9rem; /* タイトルの上のラベル */
+  --section-margin: 9rem; /* セクション間のマージン */
   --font-color: #1e3a4a;
   --cream: #f5f9fb; /* デフォルトの背景 */
 }
@@ -9,7 +9,6 @@ body {
   color: var(--font-color);
   background: var(--cream);
   line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
 }
 
 /* ┌─────────────────────────────────────────┐
@@ -36,10 +35,6 @@ body {
   height: 45rem;
   object-fit: cover;
   border-radius: 2rem;
-}
-
-.fade-up-el {
-  opacity: 1;
 }
 
 /* コンテンツパネル（右） */
@@ -93,11 +88,6 @@ body {
   letter-spacing: 0.02em;
   line-height: 1.9;
   margin-bottom: 2rem;
-}
-
-/* └ リンク */
-.hero_link {
-  color: white;
 }
 
 /* ┌─────────────────────────────────────────┐
@@ -211,7 +201,6 @@ body {
 
 /* カードタイトル */
 .service_item_title {
-  font-family: "Zen Maru Gothic", sans-serif;
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 1rem;
@@ -282,11 +271,9 @@ body {
   justify-content: flex-start;
   align-items: center;
   padding: 1rem;
+  font-weight: bold;
 
-  border-top: 0.1rem solid #7dd4f5;
-  border-right: 0.1rem solid #7dd4f5;
-  border-left: 0.1rem solid #7dd4f5;
-  border-bottom: 0.1rem solid #7dd4f5;
+  border: 0.1rem solid #7dd4f5;
 }
 
 .flow_item:nth-child(1) {
@@ -298,12 +285,10 @@ body {
 }
 
 .flow_item:nth-child(odd) {
-  font-weight: bold;
   background-color: #e2edf4;
 }
 
 .flow_item:nth-child(even) {
-  font-weight: bold;
   background-color: white;
 }
 
@@ -342,4 +327,89 @@ body {
   color: black;
   padding: 0.5rem 2rem;
   border-radius: 2rem;
+}
+
+/* ┌─────────────────────────────────────────┐
+   │ スマホ　向けレスポンシブ                   │
+   └─────────────────────────────────────────┘ */
+
+@media (max-width: 500px) {
+  :root {
+    --side-width: 1rem;
+  }
+
+  /* ┌─────────────────────────────────────────┐
+   │ メインビジュアル                        │
+   └─────────────────────────────────────────┘ */
+
+  /* メインビジュアル全体（画像＋パネル重ね） */
+  .hero_area {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .hero_title {
+    font-size: 4rem;
+  }
+
+  /* コンテンツパネル（右） */
+  .hero_content {
+    position: static;
+    width: 100%;
+    height: 43rem;
+  }
+
+  /* 背景画像（左） */
+  .hero_image {
+    width: 100%;
+  }
+
+  /* └ テキスト側（左） */
+  .overview_content {
+    width: 100%;
+  }
+
+  /* タイトル */
+  .overview_title {
+    width: 100%;
+    font-size: 2.3rem;
+  }
+
+  /* └ 画像側（右） */
+  .overview_img {
+    display: none;
+  }
+
+  /* ┌─────────────────────────────────────────┐
+   │ 業務内容                                │
+   └─────────────────────────────────────────┘ */
+
+  /* カードラッパー */
+  .service_wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  /* └ カード */
+  .service_item {
+    width: 100%;
+  }
+
+  .service_item:nth-child(2) {
+    margin-top: 0rem;
+  }
+  .service_item:nth-child(3) {
+    margin-top: 0rem;
+  }
+
+  /* ┌─────────────────────────────────────────┐
+   │ 一日の流れ　CTA                        │
+   └─────────────────────────────────────────┘ */
+  /* 一日の流れ CTAエリア */
+  .flow_area {
+    flex-direction: column;
+    gap: 3rem;
+  }
 }
