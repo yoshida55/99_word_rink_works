@@ -677,6 +677,94 @@ nav a:hover { color: var(--blue-main); }
 
 .cta-btn svg { width: 14px; height: 14px; }
 
+/* ── USERS VOICE（独立セクション） ── */
+.voice {
+  padding: 5rem 2rem;
+  background: var(--cream);
+}
+
+.voice-label {
+  justify-content: flex-end;
+}
+
+.voice-heading {
+  font-family: "Noto Serif JP", serif;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 400;
+  color: var(--blue-deep);
+  text-align: center;
+  margin-bottom: 3rem;
+  letter-spacing: 0.08em;
+}
+
+.voice-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.voice-card {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.voice-photo {
+  flex-shrink: 0;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.voice-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.voice-quote {
+  position: relative;
+  background: var(--white);
+  border: 1px solid var(--blue-pale);
+  border-radius: var(--radius);
+  padding: 1.2rem 1.4rem;
+  font-size: 0.88rem;
+  line-height: 2;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+/* 吹き出しの三角 */
+.voice-quote::before {
+  content: "";
+  position: absolute;
+  left: -8px;
+  top: 20px;
+  width: 14px;
+  height: 14px;
+  background: var(--white);
+  border-left: 1px solid var(--blue-pale);
+  border-bottom: 1px solid var(--blue-pale);
+  transform: rotate(45deg);
+}
+
+.voice-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  font-size: 0.78rem;
+  color: var(--text-sub);
+  padding-left: 0.2rem;
+}
+
+.voice-name {
+  font-weight: 500;
+  color: var(--text);
+}
+
 /* ── FOOTER ── */
 footer {
   background: #fff;
@@ -746,6 +834,9 @@ footer p { font-size: 0.76rem; line-height: 2; }
     margin-top: 0;
   }
 
+  .voice-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 720px) {
