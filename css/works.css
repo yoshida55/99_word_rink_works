@@ -16,8 +16,6 @@ body {
 
 .works_area {
   padding: 3rem var(--side-width) 10rem;
-
-  overflow: hidden;
 }
 
 /* セクションラベル */
@@ -274,6 +272,61 @@ input[name="tab_item"] {
   /* タブレット・スマホ向け */
 }
 
-@media (max-width: 500px) { 
-  
- }
+/* ┌─────────────────────────────────────────┐
+   │ スマホ　向けレスポンシブ                   │
+   └─────────────────────────────────────────┘ */
+
+@media (max-width: 500px) {
+  :root {
+    --side-width: 0rem;
+  }
+
+  body {
+    line-height: 1.4;
+  }
+  /* ============================================================
+   作業内容 メインビジュアル
+============================================================ */
+  .works_area {
+    padding: 3rem 0 5rem 0;
+    margin-bottom: 3rem;
+  }
+
+  /* ┌─────────────────────────────────────────┐
+     │ 企業理念・価値観                        │
+     └─────────────────────────────────────────┘ */
+
+  /* 企業理念セクション外枠 */
+  .philosophy_area {
+    margin-bottom: 5rem;
+  }
+
+  /* キャッチコピー（大きな文字） */
+  .philosophy_catch {
+    font-size: 3rem;
+  }
+
+  /* 説明文（） */
+  .philosophy_description {
+    line-height: 1.8;
+    text-align: center;
+  }
+
+  /* ┌─────────────────────────────────────────┐
+   │ 作業内容（タブセクション）               │
+   └─────────────────────────────────────────┘ */
+  .works_content {
+    height: 20rem;
+  }
+
+  /* セクション説明文 */
+  .works_tab_description {
+    padding-top: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .works_tab_item {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+}
