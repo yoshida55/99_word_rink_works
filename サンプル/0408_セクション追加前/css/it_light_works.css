@@ -1,11 +1,13 @@
 :root {
   --side-width: 5rem;
   --section-margin: 9rem; /* セクション間のマージン */
+  --font-color: #1e3a4a;
   --cream: #f5f9fb; /* デフォルトの背景 */
 }
 
 body {
   font-weight: 600;
+  color: var(--font-color);
   background: var(--cream);
   line-height: 1.6;
 }
@@ -18,7 +20,7 @@ body {
 .hero_area {
   position: relative;
   padding-top: 5rem;
-  margin-bottom: var(--section-margin);
+  margin-bottom: 4rem;
 }
 
 .hero_title {
@@ -223,85 +225,6 @@ body {
 }
 
 /* ┌─────────────────────────────────────────┐
-   │ 利用者の声                              │
-   └─────────────────────────────────────────┘ */
-
-/* セクション全体 */
-.voice_area {
-  padding: 0 var(--side-width) var(--section-margin);
-  margin-bottom: var(--section-margin);
-}
-
-.voice_title {
-  text-align: left;
-  margin-bottom: 4rem;
-}
-
-/* 2列グリッド */
-.voice_wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-}
-
-/* カード: 写真(左) + 吹き出し+名前(右) */
-.voice_card {
-  display: flex;
-  gap: 1.5rem;
-  align-items: flex-start;
-}
-
-/* 丸い写真 */
-.voice_photo {
-  flex-shrink: 0;
-  width: 9rem;
-  height: 9rem;
-  border-radius: 50%;
-  overflow: hidden;
-}
-
-.voice_photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* 吹き出し本体 */
-.voice_quote {
-  position: relative;
-  background: white;
-  border: 0.1rem solid #d0e8f2;
-  border-radius: 1rem;
-  padding: 1.5rem;
-  line-height: 2;
-  margin-bottom: 1rem;
-  min-height: 15rem;
-}
-
-/* 吹き出しの三角 */
-.voice_quote::before {
-  content: "";
-  position: absolute;
-  left: -0.7rem;
-  top: 2rem;
-  width: 1.2rem;
-  height: 1.2rem;
-  background: white;
-  border-left: 0.1rem solid #d0e8f2;
-  border-bottom: 0.1rem solid #d0e8f2;
-  transform: rotate(45deg);
-}
-
-/* 名前・役割 */
-.voice_name {
-  font-weight: bold;
-}
-
-.voice_role {
-  color: #5a7a8e;
-}
-
-/* ┌─────────────────────────────────────────┐
    │ 一日の流れ　CTA                        │
    └─────────────────────────────────────────┘ */
 
@@ -468,15 +391,6 @@ body {
   /* └ 画像側（右） */
   .overview_img {
     display: none;
-  }
-
-  /* ┌─────────────────────────────────────────┐
-   │ 利用者の声                              │
-   └─────────────────────────────────────────┘ */
-
-  /* 2列グリッド */
-  .voice_wrapper {
-    grid-template-columns: 1fr;
   }
 
   /* ┌─────────────────────────────────────────┐

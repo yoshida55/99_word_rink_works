@@ -1,0 +1,129 @@
+/* デバイス共通 */
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  font-size: 1.44rem;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+main {
+  width: 100%;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  width: 100%;
+  height: 8rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  background-color: grey;
+}
+
+footer {
+  width: 100%;
+  height: 8rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  background-color: grey;
+  position: sticky;
+  top: 100vh;
+}
+
+h1 {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: bold;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+/* PC表示 */
+@media screen and (min-width:961px) {
+  html {
+    font-size: calc(10 / 1400 * 100vw);
+  }
+
+  body {
+    width: 100%;
+  }
+
+  main,
+  header,
+  footer {
+    padding: 0 15%;
+  }
+
+  h1 {
+    font-size: 3.2rem;
+  }
+
+  h2 {
+    font-size: 2.6rem;
+  }
+
+  h3 {
+    font-size: 2.2rem;
+  }
+}
+
+/* タブレット表示 */
+@media screen and (max-width:960px) {
+  html {
+    font-size: calc(10 / 960 * 100vw);
+  }
+
+  main,
+  header,
+  footer {
+    padding: 0 10%;
+  }
+
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  h2 {
+    font-size: 2.4rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+}
+
+/* スマホ表示 */
+@media screen and (max-width:500px) {
+  html {
+    font-size: calc(10 / 500 * 100vw);
+  }
+
+  main,
+  header,
+  footer {
+    padding: 0 5%;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+  }
+
+}
