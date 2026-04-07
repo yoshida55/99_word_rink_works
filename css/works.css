@@ -1,17 +1,14 @@
 :root {
-  --side-width: 10rem;
+  --side-width: 9rem;
   --sect-label-font-size: 1.2rem; /* タイトルの上のラベル */
-  --font-color: #1e3a4a;
   --cream: #f5f9fb; /* デフォルトの背景 */
   --label-color: #4a95b5; /* タイトルの上のラベルの色 */
 }
 
 body {
   font-weight: 1000;
-  color: var(--font-color);
   background: var(--cream);
   line-height: 1.95;
-  -webkit-font-smoothing: antialiased;
 }
 
 /* ============================================================
@@ -60,24 +57,9 @@ body {
 
 /* 企業理念セクション外枠 */
 .philosophy_area {
-  padding: 10rem var(--side-width);
-
+  padding: 0 var(--side-width);
   text-align: center;
-  margin-top: -10rem; /* 上のセクションと重ねる */
-  position: relative;
-  z-index: 5;
-  overflow: hidden;
-}
-
-/* └ 鳥イラスト（右下セクションの中央あたりでふわふわ） */
-.philosophy_bird {
-  position: absolute;
-  top: 18rem;
-  right: 8rem;
-  width: 12rem;
-  height: auto;
-  pointer-events: none;
-  z-index: 1;
+  margin-bottom: 10rem;
 }
 
 .section_label {
@@ -151,7 +133,8 @@ body {
 .works_tab_title {
   font-family: "Zen Maru Gothic", sans-serif;
   letter-spacing: 0.15rem;
-  margin-top: 1.5rem;
+  margin-top: 0;
+  font-weight: normal;
 }
 
 /* セクション説明文 */
@@ -180,7 +163,6 @@ body {
   background-color: #e8f4f8;
   line-height: 50px;
   font-size: 16px;
-  text-align: center;
   color: #565656;
   display: block;
   float: left;
@@ -271,11 +253,6 @@ input[name="tab_item"] {
 .works_content_text {
   width: calc((100% - 5rem) / 2);
   text-align: left;
-}
-
-.works_tab_title {
-  margin-top: 0;
-  font-weight: normal;
 }
 
 .works_tab_wrapper {

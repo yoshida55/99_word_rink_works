@@ -9,7 +9,6 @@ body {
   color: var(--font-color);
   background: var(--cream);
   line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
 }
 
 /* ┌─────────────────────────────────────────┐
@@ -95,11 +94,6 @@ body {
   margin-bottom: 2rem;
 }
 
-/* └ リンク */
-.hero_link {
-  color: white;
-}
-
 /* ┌─────────────────────────────────────────┐
    │ OVERVIEW                                │
    └─────────────────────────────────────────┘ */
@@ -129,14 +123,10 @@ body {
   margin-bottom: 2rem;
 }
 
-/* 詳細文 */
-.overview_description {
-}
-
 /* └ 画像側（右） */
 .overview_img {
   margin-top: 6rem;
-  width: 45%;
+  width: 35%;
   height: 30rem;
   object-fit: cover;
   border-radius: 2rem;
@@ -169,13 +159,6 @@ body {
   margin-bottom: var(--section-margin);
   background-color: #e2edf4;
   color: black;
-}
-
-/* ラベル */
-.service_label {
-  display: block;
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
 }
 
 /* タイトル */
@@ -222,7 +205,6 @@ body {
 
 /* カードタイトル */
 .service_item_title {
-  font-family: "Zen Maru Gothic", sans-serif;
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 1rem;
@@ -249,11 +231,10 @@ body {
    │ 一日の流れ　CTA                        │
    └─────────────────────────────────────────┘ */
 
-/* 一日の流れ CTAエリア【flex 横2列: タイムライン側 + CTAパネル側】 */
+/* 一日の流れ CTAエリア */
 .flow_area {
   display: flex;
   align-items: center;
-  height: auto;
   justify-content: center;
   gap: 5rem;
   padding-bottom: var(--section-margin);
@@ -276,7 +257,6 @@ body {
 
 /* 施設内ボタン */
 .flow_button {
-  display: block;
   padding: 0.1rem 2rem;
   background-color: #0098de;
   color: white;
@@ -289,7 +269,7 @@ body {
   list-style: none;
 }
 
-/* タイムライン1行【flex 横2列: 時刻 + 作業内容】 */
+/* タイムラインの各行 */
 .flow_item {
   display: flex;
   justify-content: flex-start;
@@ -299,6 +279,7 @@ body {
   border-top: 0.1rem solid #7dd4f5;
   border-right: 0.1rem solid #7dd4f5;
   border-left: 0.1rem solid #7dd4f5;
+  border-bottom: 0.1rem solid #7dd4f5;
 }
 
 .flow_item:nth-child(1) {
@@ -307,17 +288,14 @@ body {
 
 .flow_item:nth-last-child(1) {
   border-radius: 0 0 2rem 2rem;
-  border-bottom: 0.1rem solid #7dd4f5;
 }
 
 .flow_item:nth-child(odd) {
-  border-bottom: none;
   font-weight: bold;
   background-color: #e2edf4;
 }
 
 .flow_item:nth-child(even) {
-  border-bottom: none;
   font-weight: bold;
   background-color: white;
 }
@@ -333,14 +311,8 @@ body {
   display: block;
 }
 
-/* └ CTAパネル側（右） */
-.flow_cta {
-}
-
 /* CTAパネル */
 .cta_panel {
-  width: 100%;
-  top: 50rem;
   padding: 3rem;
   background-color: #0098de;
   border-radius: 2rem;
