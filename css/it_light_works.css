@@ -5,7 +5,6 @@
 }
 
 body {
-  font-weight: 600;
   background: var(--cream);
   line-height: 1.6;
 }
@@ -179,7 +178,6 @@ body {
   width: calc((100% - 6rem) / 3);
   background-color: white;
   border-radius: 2rem;
-  color: black;
 }
 
 .service_item:nth-child(2) {
@@ -228,7 +226,7 @@ body {
 
 /* セクション全体 */
 .voice_area {
-  padding: 0 var(--side-width) var(--section-margin);
+  padding-bottom: var(--section-margin);
   margin-bottom: var(--section-margin);
 }
 
@@ -241,7 +239,7 @@ body {
 .voice_wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  gap: 1rem;
 }
 
 /* カード: 写真(左) + 吹き出し+名前(右) */
@@ -378,7 +376,6 @@ body {
 /* └ 作業内容（右） */
 .flow_task {
   padding-left: 4rem;
-  display: block;
 }
 
 /* CTAパネル */

@@ -6,7 +6,6 @@
 }
 
 body {
-  font-weight: 600;
   background: var(--cream);
   line-height: 1.95;
 }
@@ -57,40 +56,27 @@ body {
 .philosophy_area {
   padding: 0 var(--side-width);
   text-align: center;
-  margin-bottom: 10rem;
+  margin-bottom: 8rem;
 }
 
 .section_label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
   width: fit-content;
   font-size: var(--sect-label-font-size);
   letter-spacing: 0.4rem;
   color: var(--main-color);
-  position: relative;
   margin: 0 auto;
-}
-
-.section_label::before {
-  content: "";
-  width: 3.5rem;
-  height: 0.1rem;
-  position: absolute;
-  top: 1.3rem;
-  left: -5rem;
-  background-color: var(--main-color);
-}
-
-.section_label::after {
-  content: "";
-  width: 3.5rem;
-  height: 0.1rem;
-  position: absolute;
-  top: 1.1rem;
-  left: 13rem;
-  background-color: var(--main-color);
 }
 
 .section_label::before,
 .section_label::after {
+  content: "";
+  width: 3.5rem;
+  height: 1px;
+  background-color: var(--main-color);
   opacity: 0.2;
 }
 
@@ -102,20 +88,20 @@ body {
 
 /* キャッチコピー（大きな文字） */
 .philosophy_catch {
-  font-size: 4rem;
+  font-size: 3.2rem;
   font-weight: 400;
-  margin-top: 3rem;
-  line-height: 1.35;
+  margin-top: 1.5rem;
+  line-height: 1.5;
   letter-spacing: 0.2rem;
   color: #2a8a9a;
 }
 
-/* 説明文（） */
+/* 説明文 */
 .philosophy_description {
-  margin-top: 3rem;
-  line-height: 2.2;
+  max-width: 50rem;
+  margin: 2rem auto 0;
+  line-height: 2;
   text-align: left;
-  padding: 0 8rem;
 }
 
 /* ┌─────────────────────────────────────────┐
@@ -143,11 +129,10 @@ body {
 
 /*タブ切り替え全体のスタイル*/
 .tabs {
-  margin-top: 0;
+  display: flex;
+  flex-wrap: wrap;
   padding-bottom: 4rem;
-  background-color: #fff;
   box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.08);
-  width: 100%;
   margin: 0 auto;
   border-radius: 2rem;
   background: linear-gradient(to bottom, #d0e8f2, #f5f9fb);
@@ -156,7 +141,6 @@ body {
 /*タブのスタイル*/
 .tab_item {
   display: block;
-  float: left;
   width: calc(100% / 2);
   height: 5rem;
   border-bottom: 0.3rem solid #5ab4bd;
@@ -181,15 +165,14 @@ input[name="tab_item"] {
 /*タブ切り替えの中身のスタイル*/
 .tab_content {
   display: none;
+  width: 100%;
   padding: 4rem 4rem 0;
-  clear: both;
   overflow: hidden;
 }
 
 /*選択されているタブのコンテンツのみを表示*/
 #all:checked ~ #all_content,
-#programming:checked ~ #programming_content,
-#design:checked ~ #design_content {
+#programming:checked ~ #programming_content {
   display: block;
   background: linear-gradient(to bottom, #d0e8f2, #f5f9fb);
 }
@@ -315,14 +298,15 @@ input[name="tab_item"] {
 
   /* キャッチコピー（大きな文字） */
   .philosophy_catch {
-    font-size: 3rem;
+    font-size: 2.4rem;
   }
 
-  /* 説明文（） */
+  /* 説明文 */
   .philosophy_description {
-    line-height: 1.8;
     text-align: center;
-    padding: 0 5rem;
+    line-height: 1.9;
+    max-width: 100%;
+    padding: 0 1rem;
   }
 
   /* ┌─────────────────────────────────────────┐
@@ -331,11 +315,11 @@ input[name="tab_item"] {
 
   /*タブ切り替えの中身のスタイル*/
   .tab_content {
-    padding: 2rem 2rem 0;
+    padding: 1.5rem 1.5rem 0;
   }
 
   .works_image {
-    height: 19rem;
-    width: 19rem;
+    height: 22rem;
+    width: 22rem;
   }
 }
