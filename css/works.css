@@ -2,7 +2,7 @@
   --side-width: 9rem;
   --sect-label-font-size: 1.2rem; /* タイトルの上のラベル */
   --cream: #f5f9fb; /* デフォルトの背景 */
-  --main-color: var(--main-color);
+  --main-color: #4a95b5;
 }
 
 body {
@@ -240,11 +240,11 @@ input[name="tab_item"] {
 
 .work_link {
   display: block;
-  width: calc((100% - 5rem) / 2);
   cursor: pointer;
 }
 
 .works_image {
+  width: calc((100% - 5rem) / 2);
   border-radius: 1rem;
 }
 
