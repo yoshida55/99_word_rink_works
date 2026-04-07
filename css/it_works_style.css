@@ -1,6 +1,6 @@
 :root {
   --side-width: 5rem;
-  --section-margin: 9rem; /* タイトルの上のラベル */
+  --section-margin: 9rem; /* セクション間のマージン */
   --font-color: #1e3a4a;
   --cream: #f5f9fb; /* デフォルトの背景 */
 }
@@ -37,9 +37,6 @@ body {
   border-radius: 2rem;
 }
 
-.fade-up-el {
-  opacity: 1;
-}
 
 /* コンテンツパネル（右） */
 .hero_content {
@@ -275,11 +272,9 @@ body {
   justify-content: flex-start;
   align-items: center;
   padding: 1rem;
+  font-weight: bold;
 
-  border-top: 0.1rem solid #7dd4f5;
-  border-right: 0.1rem solid #7dd4f5;
-  border-left: 0.1rem solid #7dd4f5;
-  border-bottom: 0.1rem solid #7dd4f5;
+  border: 0.1rem solid #7dd4f5;
 }
 
 .flow_item:nth-child(1) {
@@ -291,12 +286,10 @@ body {
 }
 
 .flow_item:nth-child(odd) {
-  font-weight: bold;
   background-color: #e2edf4;
 }
 
 .flow_item:nth-child(even) {
-  font-weight: bold;
   background-color: white;
 }
 
