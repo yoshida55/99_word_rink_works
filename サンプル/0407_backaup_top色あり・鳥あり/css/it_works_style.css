@@ -23,13 +23,6 @@ body {
   margin-bottom: 4rem;
 }
 
-.hero_title {
-  text-align: center;
-  letter-spacing: 0.3rem;
-  margin-bottom: 2rem;
-  font-size: 5rem;
-}
-
 /* 背景画像（左） */
 .hero_image {
   width: 55%;
@@ -40,12 +33,21 @@ body {
 
 .fade-up-el {
   opacity: 1;
+  transform: translateY(-4rem);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+.fade-up-el.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* コンテンツパネル（右） */
 .hero_content {
   position: absolute;
-  bottom: 6rem;
+  top: 7rem;
   right: 0;
   width: 55%;
   height: 35rem;
@@ -79,7 +81,8 @@ body {
 }
 
 /* └ 見出し */
-.hero_message {
+.hero_title {
+  font-family: "Noto Serif JP", serif;
   font-size: 4rem;
   font-weight: 400;
   letter-spacing: 0.04em;
@@ -154,6 +157,7 @@ body {
 }
 
 .work_title {
+  font-family: "Noto Serif JP", serif;
   text-align: left;
   letter-spacing: 0.3rem;
   padding-left: var(--side-width);
@@ -256,7 +260,7 @@ body {
   height: auto;
   justify-content: center;
   gap: 5rem;
-  padding-bottom: var(--section-margin);
+  margin-bottom: var(--section-margin);
 }
 
 /* └ タイムライン側（左） */
@@ -296,8 +300,8 @@ body {
   align-items: center;
   padding: 1rem;
 
-  border-top: 0.1rem solid #7dd4f5;
-  border-right: 0.1rem solid #7dd4f5;
+  border-top: 0.1rem solid#7dd4f5;
+  border-right: 0.1rem solid#7dd4f5;
   border-left: 0.1rem solid #7dd4f5;
 }
 
@@ -305,9 +309,8 @@ body {
   border-radius: 2rem 2rem 0 0;
 }
 
-.flow_item:nth-last-child(1) {
+.flow_item:nth-last-child {
   border-radius: 0 0 2rem 2rem;
-  border-bottom: 0.1rem solid #7dd4f5;
 }
 
 .flow_item:nth-child(odd) {

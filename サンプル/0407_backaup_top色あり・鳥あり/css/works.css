@@ -20,8 +20,14 @@ body {
 
 .works_area {
   padding: 3rem var(--side-width) 10rem;
+  background: linear-gradient(175deg, #85bdd1 0%, #aad0e2 50%, #daeaf2 100%);
+
+  clip-path: polygon(0 0, /* 左上 */ 100% 0, /* 右上 */ 100% 85%, /* 右下（少し上に）*/ 0 100% /* 左下（一番下） */);
 
   overflow: hidden;
+
+  position: relative;
+  z-index: 10;
 }
 
 /* セクションラベル */
@@ -43,6 +49,7 @@ body {
 
 /* タイトル（作業内容） */
 .works_title {
+  font-family: "Noto Serif JP", serif;
   text-align: center;
   letter-spacing: 0.3rem;
   font-size: 6rem;
@@ -54,6 +61,34 @@ body {
   margin-top: 1rem;
 }
 
+/* 背景（absolute） */
+.hero_deco {
+  position: absolute;
+
+  outline: 1rem solid blue;
+  border-radius: 50%; /* 丸にする */
+  opacity: 0.02;
+  background-color: blue;
+}
+
+/* 右上の丸 */
+.hero_deco.right {
+  width: 50rem;
+  height: 50rem;
+
+  top: -25rem;
+  right: -25rem;
+}
+
+/* 左下の丸 */
+.hero_deco.left {
+  width: 25rem;
+  height: 25rem;
+
+  top: 15rem;
+  left: -10rem;
+}
+
 /* ┌─────────────────────────────────────────┐
    │ 企業理念・価値観                        │
    └─────────────────────────────────────────┘ */
@@ -63,6 +98,8 @@ body {
   padding: 10rem var(--side-width);
 
   text-align: center;
+  background: linear-gradient(to bottom, #d0e8f2, #f5f9fb);
+
   margin-top: -10rem; /* 上のセクションと重ねる */
   position: relative;
   z-index: 5;
@@ -78,6 +115,73 @@ body {
   height: auto;
   pointer-events: none;
   z-index: 1;
+  animation:
+    philosophy_float 4s ease-in-out infinite,
+    bird-fly-in 0.5s ease-out forwards;
+}
+
+/* └ 雲イラスト（背景装飾） */
+.philosophy_cloud {
+  position: absolute;
+  height: auto;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.6;
+  animation: philosophy_flow 35s linear infinite;
+}
+
+.philosophy_cloud_1 {
+  top: 10%;
+  width: 20rem;
+  animation-delay: 0s;
+}
+
+.philosophy_cloud_2 {
+  top: 20rem;
+  width: 24rem;
+  animation-delay: -10s;
+}
+
+.philosophy_cloud_3 {
+  top: 40rem;
+  width: 18rem;
+  animation-delay: -20s;
+}
+
+.philosophy_cloud_4 {
+  top: 55rem;
+  width: 18rem;
+  animation-delay: -15s;
+}
+
+@keyframes bird-fly-in {
+  from {
+    transform: translate(10rem, 10rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes philosophy_float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-1.5rem);
+  }
+}
+
+@keyframes philosophy_flow {
+  0% {
+    transform: translateX(-30rem);
+  } /* 左の画面外 */
+  100% {
+    transform: translateX(100vw);
+  } /* 右の画面外 */
 }
 
 .section_label {
@@ -255,21 +359,18 @@ input[name="tab_item"] {
 
   display: flex;
   justify-content: center;
-  gap: 5rem;
-}
-
-.work_link {
-  display: block;
-  width: calc((100% - 5rem) / 2);
-  cursor: pointer;
+  align-items: flex-start;
 }
 
 .works_image {
+  width: 50%;
+  cursor: pointer;
   border-radius: 1rem;
 }
 
 .works_content_text {
-  width: calc((100% - 5rem) / 2);
+  padding-left: 2rem;
+  width: 50%;
   text-align: left;
 }
 
