@@ -6,6 +6,7 @@
 }
 
 body {
+  font-weight: 600;
   color: var(--font-color);
   background: var(--cream);
   line-height: 1.6;
