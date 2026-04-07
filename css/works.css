@@ -269,3 +269,11 @@ input[name="tab_item"] {
   border: 1px solid #4a95b5;
   border-radius: 100px;
 }
+
+@media screen and (max-width: 960px) {
+  /* タブレット・スマホ向け */
+}
+
+@media (max-width: 500px) { 
+  
+ }
