@@ -12,7 +12,13 @@
       "Edit(~/.claude/skills/auto-class/**)",
       "Edit(~/.claude/skills/auto-skeleton/**)",
       "WebFetch(domain:cocopia-works.jp)",
-      "Bash(curl -s -X POST http://127.0.0.1:3848/highlight-line -H \"Content-Type: application/json\" --data-binary \"{\"\"filePath\"\": \"\"D:/50_knowledge/01_memo.md\"\", \"\"lineNumber\"\": 18803}\")"
+      "Bash(curl -s -X POST http://127.0.0.1:3848/highlight-line -H \"Content-Type: application/json\" --data-binary \"{\"\"filePath\"\": \"\"D:/50_knowledge/01_memo.md\"\", \"\"lineNumber\"\": 18803}\")",
+      "Edit(~/.claude/skills/deliver/**)",
+      "Bash(robocopy \"d:\\\\02_作業\\\\00_リンクワーク\\\\HTML自動化\\\\過去の課題\\\\85_自社ホームぺージ\" \"d:\\\\02_作業\\\\00_リンクワーク\\\\HTML自動化\\\\過去の課題\\\\_deliver_tmp_work\\\\20260409_office\" /E /XD \".git\" \".github\" \".vscode\" \".claude\" \"node_modules\" \"サンプル\" /XF \"*.log\" \"Thumbs.db\" \".DS_Store\")",
+      "Bash(powershell -Command \"robocopy ''d:\\\\02_作業\\\\00_リンクワーク\\\\HTML自動化\\\\過去の課題\\\\85_自社ホームぺージ'' ''d:\\\\02_作業\\\\00_リンクワーク\\\\HTML自動化\\\\過去の課題\\\\_deliver_tmp_work\\\\20260409_office'' /E /XD ''.git'' ''.github'' ''.vscode'' ''.claude'' ''node_modules'' ''サンプル'' /XF ''*.log'' ''Thumbs.db'' ''.DS_Store''; if \\($LASTEXITCODE -le 7\\) { exit 0 } else { exit $LASTEXITCODE }\")",
+      "Bash(powershell -Command \"Compress-Archive -Path ''d:\\\\02_作業\\\\00_リンクワーク\\\\HTML自動化\\\\過去の課題\\\\_deliver_tmp_work\\\\20260409_office'' -DestinationPath ''D:\\\\02_作業\\\\00_リンクワーク\\\\HTML自動化\\\\提出\\\\20260409_office.zip'' -Force\")",
+      "Bash(powershell -Command \"Remove-Item -Recurse -Force ''d:\\\\02_作業\\\\00_リンクワーク\\\\HTML自動化\\\\過去の課題\\\\_deliver_tmp_work''\")",
+      "Bash(powershell -Command \"\\(Get-Item ''D:\\\\02_作業\\\\00_リンクワーク\\\\HTML自動化\\\\提出\\\\20260409_office.zip''\\).Length / 1MB\")"
     ],
     "additionalDirectories": [
       "C:\\Users\\sensh\\.claude\\skills"
