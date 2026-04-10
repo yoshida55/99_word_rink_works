@@ -393,21 +393,10 @@ body {
 }
 
 /* ┌─────────────────────────────────────────┐
-   │ タブレット　向けレスポンシブ                   │
-   └─────────────────────────────────────────┘ */
-
-@media (max-width: 960px) {
-  /* └ 見出し */
-  .hero_message {
-    font-size: 3rem;
-  }
-}
-
-/* ┌─────────────────────────────────────────┐
    │ スマホ　向けレスポンシブ                   │
    └─────────────────────────────────────────┘ */
 
-@media (max-width: 500px) {
+@media (max-width: 960px) {
   /* ┌─────────────────────────────────────────┐
    │ メインビジュアル                        │
    └─────────────────────────────────────────┘ */
@@ -419,15 +408,11 @@ body {
     gap: 3rem;
   }
 
-  .hero_title {
-    font-size: 4rem;
-  }
-
   /* コンテンツパネル（右） */
   .hero_content {
     position: static;
     width: 100%;
-    height: 43rem;
+    height: auto;
   }
 
   /* 背景画像（左） */
@@ -474,9 +459,6 @@ body {
   /* 業務内容エリア */
   .service_area {
     padding: var(--section-margin) 10%;
-    margin-bottom: var(--section-margin);
-    background-color: #e2edf4;
-    color: black;
   }
 
   /* └ カード */
@@ -497,6 +479,5 @@ body {
   /* 一日の流れ CTAエリア */
   .flow_area {
     flex-direction: column;
-    gap: 3rem;
   }
 }
