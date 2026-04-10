@@ -1,5 +1,4 @@
 :root {
-  --side-width: 5rem;
   --section-margin: 9rem; /* セクション間のマージン */
   --cream: #f5f9fb; /* デフォルトの背景 */
 }
@@ -24,7 +23,6 @@ body {
   text-align: center;
   letter-spacing: 0.3rem;
   margin-bottom: 2rem;
-  font-size: 5rem;
 }
 
 /* 背景画像（左） */
@@ -95,7 +93,6 @@ body {
 /* 概要セクション */
 .overview_area {
   display: flex;
-  width: 95%;
   margin: 0 auto;
   gap: 3rem;
   margin-bottom: var(--section-margin);
@@ -140,7 +137,6 @@ body {
 .work_title {
   text-align: left;
   letter-spacing: 0.3rem;
-  padding-left: var(--side-width);
 }
 
 /* ┌─────────────────────────────────────────┐
@@ -149,8 +145,8 @@ body {
 
 /* 業務内容エリア */
 .service_area {
-  padding: var(--section-margin) var(--side-width);
   margin-bottom: var(--section-margin);
+  padding: var(--section-margin) 4rem;
   background-color: #e2edf4;
   color: black;
 }
@@ -308,13 +304,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 5rem;
+  gap: 3rem;
   padding-bottom: var(--section-margin);
 }
 
 /* └ タイムライン側（左） */
 .flow_content {
-  width: 80%;
+  width: 100%;
 }
 
 /* タイトル */
@@ -324,15 +320,6 @@ body {
 
 /* リード文 */
 .flow_lead {
-  margin-bottom: 2rem;
-}
-
-/* 施設内ボタン */
-.flow_button {
-  padding: 0.1rem 2rem;
-  background-color: #0098de;
-  color: white;
-  border-radius: 2rem;
   margin-bottom: 2rem;
 }
 
@@ -380,6 +367,7 @@ body {
 
 /* CTAパネル */
 .cta_panel {
+  margin-top: 6.5rem;
   padding: 3rem;
   background-color: #0098de;
   border-radius: 2rem;
@@ -420,10 +408,6 @@ body {
    └─────────────────────────────────────────┘ */
 
 @media (max-width: 500px) {
-  :root {
-    --side-width: 1rem;
-  }
-
   /* ┌─────────────────────────────────────────┐
    │ メインビジュアル                        │
    └─────────────────────────────────────────┘ */
@@ -485,6 +469,14 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 3rem;
+  }
+
+  /* 業務内容エリア */
+  .service_area {
+    padding: var(--section-margin) 10%;
+    margin-bottom: var(--section-margin);
+    background-color: #e2edf4;
+    color: black;
   }
 
   /* └ カード */

@@ -23,12 +23,11 @@ body {
   display: block;
   width: fit-content;
 
-  font-size: var(--sect-label-font-size);
   padding: 0.5rem 1rem;
   letter-spacing: 0.3rem;
 
   margin: 0 auto;
-
+  font-size: var(--sect-label-font-size);
   color: var(--main-color);
 
   outline: 0.1rem solid var(--main-color);
@@ -39,7 +38,6 @@ body {
 .works_title {
   text-align: center;
   letter-spacing: 0.3rem;
-  font-size: 6rem;
 }
 
 /* 説明文 */
@@ -146,7 +144,6 @@ body {
   border-bottom: 0.3rem solid #5ab4bd;
   border-radius: 2rem;
   background-color: #e8f4f8;
-  font-size: 1.6rem;
   font-weight: bold;
   line-height: 5rem;
   color: #565656;
@@ -243,7 +240,7 @@ input[name="tab_item"] {
 }
 
 .works_tab_item {
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem;
   font-size: 1.2rem;
   font-weight: normal;
   background-color: rgba(74, 149, 181, 0.15);
@@ -282,11 +279,6 @@ input[name="tab_item"] {
     margin-bottom: 3rem;
   }
 
-  /* タイトル（事業所について） */
-  .works_title {
-    font-size: 4rem;
-  }
-
   /* ┌─────────────────────────────────────────┐
      │ 企業理念・価値観                        │
      └─────────────────────────────────────────┘ */
@@ -303,10 +295,7 @@ input[name="tab_item"] {
 
   /* 説明文 */
   .philosophy_description {
-    text-align: center;
     line-height: 1.9;
-    max-width: 100%;
-    padding: 0 1rem;
   }
 
   /* ┌─────────────────────────────────────────┐
