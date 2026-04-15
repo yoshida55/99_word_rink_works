@@ -1,8 +1,8 @@
 :root {
   --side-width: 9rem;
   --sect-label-font-size: 1.2rem; /* タイトルの上のラベル */
-  --cream: #f5f9fb; /* デフォルトの背景 */
-  --main-color: #4a95b5;
+  --cream: #eff9fd; /* デフォルトの背景 */
+  --main-color: #3aabdb;
 }
 
 body {
@@ -93,7 +93,7 @@ body {
   margin-top: 1.5rem;
   line-height: 1.5;
   letter-spacing: 0.2rem;
-  color: #2a8a9a;
+  color: #1a3a4a;
 }
 
 /* 説明文 */
@@ -135,7 +135,7 @@ body {
   box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.08);
   margin: 0 auto;
   border-radius: 2rem;
-  background: linear-gradient(to bottom, #d0e8f2, #f5f9fb);
+  background: linear-gradient(to bottom, #c5e8f7, #eff9fd);
 }
 
 /*タブのスタイル*/
@@ -143,9 +143,9 @@ body {
   display: block;
   width: calc(100% / 2);
   height: 5rem;
-  border-bottom: 0.3rem solid #5ab4bd;
+  border-bottom: 0.3rem solid #5bc8f5;
   border-radius: 2rem;
-  background-color: #e8f4f8;
+  background-color: #dcf2fc;
   font-weight: bold;
   line-height: 5rem;
   color: #565656;
@@ -173,12 +173,12 @@ input[name="tab_item"] {
 #all:checked ~ #all_content,
 #programming:checked ~ #programming_content {
   display: block;
-  background: linear-gradient(to bottom, #d0e8f2, #f5f9fb);
+  background: linear-gradient(to bottom, #c5e8f7, #eff9fd);
 }
 
 /*選択されているタブのスタイルを変える*/
 .tabs input:checked + .tab_item {
-  background-color: #5ab4bd;
+  background-color: #3aabdb;
   color: #fff;
 }
 
@@ -245,7 +245,7 @@ input[name="tab_item"] {
   padding: 0.5rem 2rem;
   font-size: 1.2rem;
   font-weight: normal;
-  background-color: rgba(74, 149, 181, 0.15);
+  background-color: rgba(58, 171, 219, 0.15);
   color: var(--main-color);
   border: 1px solid var(--main-color);
   border-radius: 100px;

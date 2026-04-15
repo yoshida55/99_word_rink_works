@@ -1,44 +1,23 @@
 :root {
-  --section-margin: 9rem; /* 各セクションの下に空ける余白 */
-  --cream: #ffffff; /* ページ全体の背景（白） */
-  --main-color: #0284c7; /* 見出しの下線、役職名、時刻の青 ⇀強調するときに使用 */
-  --accent: #bae6fd; /* CTAボタンの背景色 */
-  --text-color: black; /* 本文の文字色 */
-  --blue-light: #bae6fd; /* 一日の流れの偶数行の薄い水色＋CTAのボタン */
-  --border: #7dd3fc; /* 枠線・吹き出しの線の水色 */
+  --section-margin: 9rem; /* セクション間のマージン */
+  --cream: #ffffff; /* 白（ベース） */
+  --main-color: #0d2149; /* 濃紺（青セクション用） */
+  --accent: #fbbf24; /* イエロー */
+  --text-color: #1a1a2e; /* メインテキスト（濃紺） */
+  --gray-light: #14306a; /* 濃紺セクションの背景 */
+  --border: #e5e5ea; /* ボーダー（白セクション用） */
 }
 
 body {
   background: var(--cream);
-  line-height: 1.9;
-  font-family: "Noto Sans JP", sans-serif;
-  font-weight: 400;
-  letter-spacing: 0.04em;
-  color: var(--text-color);
-}
-
-/* 見出しだけ明朝体にしたい */
-.hero_title,
-.overview_title,
-.service_title,
-.voice_title,
-.flow_title,
-.cta_title,
-.hero_message,
-.work_title {
-  font-family: "Noto Serif JP", serif;
-  font-weight: 500;
-}
-
-.main_label {
-  font-weight: 300;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
+  line-height: 1.6;
 }
 
 /* ┌─────────────────────────────────────────┐
    │ メインビジュアル                        │
    └─────────────────────────────────────────┘ */
+
+/* メインビジュアル全体（画像＋パネル重ね） */
 .hero_area {
   position: relative;
   padding-top: 5rem;
@@ -51,13 +30,15 @@ body {
   margin-bottom: 2rem;
 }
 
+/* 背景画像（左） */
 .hero_image {
   width: 55%;
   height: 45rem;
   object-fit: cover;
-  border-radius: 0;
+  border-radius: 2rem;
 }
 
+/* コンテンツパネル（右） */
 .hero_content {
   position: absolute;
   bottom: 6rem;
@@ -68,24 +49,26 @@ body {
   color: white;
 
   padding: 3rem 4rem 2rem 2rem;
-  background-color: rgba(3, 105, 161, 0.82);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  background-color: var(--main-color);
+  box-shadow: 0 8px 32px rgba(30, 58, 138, 0.25);
+  border-radius: 2rem;
 }
 
-/* 青背景のときはラベルを薄色にする */
+/* ヒーロー内のラベルは青背景に合わせて黄色に */
 .hero_content .main_label {
-  color: #cbd5e1;
+  color: var(--accent);
 }
 
 .hero_content .main_label::after {
-  background-color: #cbd5e1;
+  background-color: var(--accent);
 }
 
+/* └ ラベル */
 .main_label {
   display: block;
   font-size: 1.4rem;
   margin-bottom: 3rem;
-  color: #64748b;
+  color: var(--main-color);
   letter-spacing: 0.2rem;
 }
 
@@ -95,25 +78,23 @@ body {
 
   width: 3rem;
   height: 0.1rem;
-  background-color: #64748b;
+  background-color: var(--main-color);
 
   vertical-align: middle;
 
   margin-left: 1rem;
 }
 
+/* └ 見出し */
 .hero_message {
   font-size: 4rem;
   font-weight: 400;
   letter-spacing: 0.04em;
   line-height: 1.5;
   margin-bottom: 2rem;
-
-  /* 文字の後ろだけ色をつける */
-  background-color: #1d4ed8;
-  padding: 0.3rem 0.8rem;
 }
 
+/* └ 説明文 */
 .hero_description {
   font-size: 1.6rem;
   letter-spacing: 0.02em;
@@ -124,6 +105,8 @@ body {
 /* ┌─────────────────────────────────────────┐
    │ OVERVIEW                                │
    └─────────────────────────────────────────┘ */
+
+/* 概要セクション */
 .overview_area {
   display: flex;
   margin: 0 auto;
@@ -131,10 +114,12 @@ body {
   margin-bottom: var(--section-margin);
 }
 
+/* └ テキスト側（左） */
 .overview_content {
   width: 60%;
 }
 
+/* タイトル */
 .overview_title {
   font-size: 3rem;
   font-weight: 400;
@@ -146,6 +131,7 @@ body {
   margin-bottom: 2rem;
 }
 
+/* └ 画像側（右） */
 .overview_img {
   margin-top: 6rem;
   width: 35%;
@@ -173,21 +159,29 @@ body {
 /* ┌─────────────────────────────────────────┐
    │ 業務内容                                │
    └─────────────────────────────────────────┘ */
+
+/* 業務内容エリア */
 .service_area {
   margin-bottom: 0;
   padding: var(--section-margin) 4rem;
-  background-color: #e0f2fe;
-  color: var(--text-color);
+  background:
+    radial-gradient(circle at 20% 30%, rgba(125, 211, 252, 0.25), transparent 45%),
+    radial-gradient(circle at 80% 70%, rgba(96, 165, 250, 0.18), transparent 45%),
+    linear-gradient(135deg, #0a1833 0%, #14306a 60%, #1e3a8a 100%);
+  color: white;
 }
 
+/* タイトル */
 .service_title {
   margin-bottom: 2rem;
 }
 
+/* リード文 */
 .service_lead {
   margin-bottom: 2rem;
 }
 
+/* カードラッパー */
 .service_wrapper {
   display: flex;
   justify-content: space-between;
@@ -195,16 +189,17 @@ body {
   gap: 2rem;
 }
 
+/* └ カード */
 .service_item {
-  flex: 1;
-  background-color: #ffffff;
-  border: 1px solid var(--border);
+  width: calc((100% - 6rem) / 3);
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-radius: 2rem;
-  color: var(--text-color);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  color: white;
 }
 
-/* カードを階段状に並べるために2枚目・3枚目を下げる */
 .service_item:nth-child(2) {
   margin-top: 4rem;
 }
@@ -212,6 +207,7 @@ body {
   margin-top: 8rem;
 }
 
+/* カード画像 */
 .service_img {
   width: 100%;
   height: 25rem;
@@ -220,6 +216,7 @@ body {
   margin-bottom: 3rem;
 }
 
+/* カードタイトル */
 .service_item_title {
   font-size: 2.5rem;
   font-weight: bold;
@@ -227,15 +224,18 @@ body {
   padding-left: 2rem;
 }
 
+/* カード説明文 */
 .service_item_description {
   padding: 0 2rem;
   margin-bottom: 2rem;
 }
 
+/* リスト */
 .service_list {
   padding: 0 2rem 2rem 4rem;
 }
 
+/* リスト項目 */
 .service_list li {
   list-style: disc;
 }
@@ -243,6 +243,8 @@ body {
 /* ┌─────────────────────────────────────────┐
    │ 利用者の声                              │
    └─────────────────────────────────────────┘ */
+
+/* セクション全体 */
 .voice_area {
   padding: var(--section-margin) 4rem;
   margin-bottom: 0;
@@ -255,19 +257,21 @@ body {
   margin-bottom: 4rem;
 }
 
+/* 2列グリッド */
 .voice_wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
 
-/* 写真＋吹き出しを横並びに */
+/* カード: 写真(左) + 吹き出し+名前(右) */
 .voice_card {
   display: flex;
   gap: 1.5rem;
   align-items: flex-start;
 }
 
+/* 丸い写真 */
 .voice_photo {
   flex-shrink: 0;
   width: 9rem;
@@ -282,6 +286,7 @@ body {
   object-fit: cover;
 }
 
+/* 吹き出し本体 */
 .voice_quote {
   position: relative;
   background: white;
@@ -291,11 +296,11 @@ body {
   line-height: 2;
   margin-bottom: 1rem;
   min-height: 15rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
   color: var(--text-color);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-/* 吹き出しの左に三角のしっぽ */
+/* 吹き出しの三角 */
 .voice_quote::before {
   content: "";
   position: absolute;
@@ -309,6 +314,11 @@ body {
   transform: rotate(45deg);
 }
 
+.voice_role {
+  color: var(--main-color);
+}
+
+/* 名前・役割 */
 .voice_name {
   font-weight: bold;
 }
@@ -320,32 +330,42 @@ body {
 /* ┌─────────────────────────────────────────┐
    │ 一日の流れ　CTA                        │
    └─────────────────────────────────────────┘ */
+
+/* 一日の流れ CTAエリア */
 .flow_area {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 3rem;
   padding: var(--section-margin) 4rem;
-  background-color: #e0f2fe;
-  color: var(--text-color);
+  background:
+    radial-gradient(circle at 75% 25%, rgba(147, 197, 253, 0.22), transparent 45%),
+    radial-gradient(circle at 25% 80%, rgba(125, 211, 252, 0.18), transparent 45%),
+    linear-gradient(160deg, #0a1833 0%, #14306a 60%, #1e3a8a 100%);
+  color: white;
 }
 
+/* └ タイムライン側（左） */
 .flow_content {
   width: 100%;
 }
 
+/* タイトル */
 .flow_title {
   text-align: center;
 }
 
+/* リード文 */
 .flow_lead {
   margin-bottom: 2rem;
 }
 
+/* タイムラインリスト */
 .flow_list {
   list-style: none;
 }
 
+/* タイムラインの各行 */
 .flow_item {
   display: flex;
   justify-content: flex-start;
@@ -356,7 +376,6 @@ body {
   border: 0.1rem solid var(--border);
 }
 
-/* 最初と最後だけ角丸にする */
 .flow_item:nth-child(1) {
   border-radius: 2rem 2rem 0 0;
 }
@@ -365,47 +384,60 @@ body {
   border-radius: 0 0 2rem 2rem;
 }
 
-/* 行を交互に色分けして縞模様にする */
 .flow_item:nth-child(odd) {
-  background-color: #ffffff;
+  background-color: #e2edf4;
 }
 
 .flow_item:nth-child(even) {
-  background-color: var(--blue-light);
-  color: #888888; /* 文字色を少し薄くして休憩っぽく */
+  background-color: white;
 }
 
+.flow_item {
+  border-color: #7dd4f5;
+  color: var(--text-color);
+}
+
+.flow_time {
+  color: var(--text-color);
+}
+
+/* └ 時刻（左）に紫のアクセント */
 .flow_time {
   padding: 0.5rem 2rem;
   color: var(--main-color);
   font-weight: bold;
 }
 
+/* └ 作業内容（右） */
 .flow_task {
   padding-left: 4rem;
 }
 
-/* CTA */
+/* CTAパネル */
 .cta_panel {
   margin-top: 6.5rem;
   padding: 3rem;
-  background-color: #ffffff;
-  border: 1px solid var(--border);
+  background-color: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-radius: 2rem;
-  color: var(--text-color);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  color: white;
 }
 
+/* CTAタイトル */
 .cta_title {
   margin-bottom: 2rem;
 }
 
+/* CTA説明文 */
 .cta_description {
   margin-bottom: 2rem;
 }
 
+/* CTAリンク */
 .cta_link {
-  background-color: var(--blue-light);
+  background-color: var(--accent);
   color: var(--text-color);
   padding: 0.5rem 2rem;
   border-radius: 2rem;
@@ -415,59 +447,77 @@ body {
 /* ┌─────────────────────────────────────────┐
    │ スマホ　向けレスポンシブ                   │
    └─────────────────────────────────────────┘ */
+
 @media (max-width: 960px) {
-  /* ヒーローは縦並びにする */
+  /* ┌─────────────────────────────────────────┐
+   │ メインビジュアル                        │
+   └─────────────────────────────────────────┘ */
+
+  /* メインビジュアル全体（画像＋パネル重ね） */
   .hero_area {
     display: flex;
     flex-direction: column;
     gap: 3rem;
   }
 
+  /* コンテンツパネル（右） */
   .hero_content {
     position: static;
     width: 100%;
     height: auto;
   }
 
+  /* 背景画像（左） */
   .hero_image {
     width: 100%;
   }
 
+  /* └ テキスト側（左） */
   .overview_content {
     width: 100%;
   }
 
+  /* タイトル */
   .overview_title {
     width: 100%;
     font-size: 2.3rem;
   }
 
-  /* スマホでは画像を隠す */
+  /* └ 画像側（右） */
   .overview_img {
     display: none;
   }
 
-  /* 利用者の声を2列から1列に切り替え */
+  /* ┌─────────────────────────────────────────┐
+   │ 利用者の声                              │
+   └─────────────────────────────────────────┘ */
+
+  /* 2列グリッド */
   .voice_wrapper {
     grid-template-columns: 1fr;
   }
 
-  /* 業務内容カードを横並びから縦並びに変える */
+  /* ┌─────────────────────────────────────────┐
+   │ 業務内容                                │
+   └─────────────────────────────────────────┘ */
+
+  /* カードラッパー */
   .service_wrapper {
     flex-direction: column;
     align-items: center;
     gap: 3rem;
   }
 
+  /* 業務内容エリア */
   .service_area {
     padding: var(--section-margin) 10%;
   }
 
+  /* └ カード */
   .service_item {
     width: 100%;
   }
 
-  /* PC版でつけた段差をスマホではなくす */
   .service_item:nth-child(2) {
     margin-top: 0rem;
   }
@@ -475,6 +525,10 @@ body {
     margin-top: 0rem;
   }
 
+  /* ┌─────────────────────────────────────────┐
+   │ 一日の流れ　CTA                        │
+   └─────────────────────────────────────────┘ */
+  /* 一日の流れ CTAエリア */
   .flow_area {
     flex-direction: column;
   }
