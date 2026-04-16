@@ -1,11 +1,12 @@
 :root {
   --section-margin: 9rem; /* 各セクションの下に空ける余白 */
   --cream: #ffffff; /* ページ全体の背景（白） */
-  --main-color: #0284c7; /* 見出しの下線、役職名、時刻の青 ⇀強調するときに使用 */
+  --accent-color: #0284c7; /* 見出しの下線、役職名(利用者の声)、時刻の青 　⇀強調するときに使用 */
   --accent: #bae6fd; /* CTAボタンの背景色 */
   --text-color: black; /* 本文の文字色 */
   --blue-light: #bae6fd; /* 一日の流れの偶数行の薄い水色＋CTAのボタン */
-  --border: #7dd3fc; /* 枠線・吹き出しの線の水色 */
+  --border: #7dd3fc; /* 枠線・吹き出しの線の水色 ----------- 一日の流れの枠線など*/
+  --section-bg: #e0f2fe; /* 「業務内容」・「一日の流れ」 -----------  のセクション背景色 */
 }
 
 body {
@@ -141,7 +142,7 @@ body {
   text-decoration: underline;
   text-underline-offset: 1rem;
   text-decoration-thickness: 0.1rem;
-  text-decoration-color: var(--main-color);
+  text-decoration-color: var(--accent-color);
 
   margin-bottom: 2rem;
 }
@@ -176,7 +177,7 @@ body {
 .service_area {
   margin-bottom: 0;
   padding: var(--section-margin) 4rem;
-  background-color: #e0f2fe;
+  background-color: var(--section-bg);
   color: var(--text-color);
 }
 
@@ -273,7 +274,6 @@ body {
   width: 9rem;
   height: 9rem;
   border-radius: 50%;
-  overflow: hidden;
 }
 
 .voice_photo img {
@@ -285,7 +285,7 @@ body {
 .voice_quote {
   position: relative;
   background: white;
-  border: 0.1rem solid var(--border);
+  border: 0.1rem solid var(--accent-color);
   border-radius: 1rem;
   padding: 1.5rem;
   line-height: 2;
@@ -299,22 +299,18 @@ body {
 .voice_quote::before {
   content: "";
   position: absolute;
-  left: -0.7rem;
+  left: -0.6rem;
   top: 2rem;
   width: 1.2rem;
   height: 1.2rem;
   background: white;
-  border-left: 0.1rem solid var(--border);
-  border-bottom: 0.1rem solid var(--border);
+  border-left: 0.1rem solid var(--accent-color);
+  border-bottom: 0.1rem solid var(--accent-color);
   transform: rotate(45deg);
 }
 
 .voice_name {
   font-weight: bold;
-}
-
-.voice_role {
-  color: var(--main-color);
 }
 
 /* ┌─────────────────────────────────────────┐
@@ -326,7 +322,7 @@ body {
   justify-content: center;
   gap: 3rem;
   padding: var(--section-margin) 4rem;
-  background-color: #e0f2fe;
+  background-color: var(--section-bg);
   color: var(--text-color);
 }
 
@@ -377,7 +373,7 @@ body {
 
 .flow_time {
   padding: 0.5rem 2rem;
-  color: var(--main-color);
+  color: var(--accent-color);
   font-weight: bold;
 }
 
@@ -478,4 +474,8 @@ body {
   .flow_area {
     flex-direction: column;
   }
+}
+
+.accent_color {
+  color: var(--accent-color);
 }
