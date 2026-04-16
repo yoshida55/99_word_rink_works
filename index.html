@@ -34,54 +34,35 @@
         <p class="philosophy_description">世の中にはたくさんの仕事があって、たくさんのトビラがあるのだから、あなたが嬉しいと思える場所や時間、未来につながるトビラだって絶対ある。それを私たちが、一緒に探します。</p>
       </section>
       <!-- ===============================================
-       作業内容
+       作業リンク
+       
        =============================================== -->
-      <section class="works_tab_area">
-        <span class="section_label">OUR WORKS</span>
-        <h2 class="section_title">作業の内容</h2>
-        <p class="works_tab_description">リンクワークスは大きく分けて２種類の作業があります。<br />ご自身の興味や体調に合わせて、自分に合った働き方を選べます。</p>
+      <!-- 作業リンクセクション外枠【flex 横2列: テキスト側 + 画像側】 -->
+      <section class="link_area">
+        <!-- └ テキスト側（左） -->
+        <div class="link_text">
+          <span class="link_label">LINKWORKS SENDAI</span>
+          <h2 class="link_title">あなたの「できる」を、見つけよう。</h2>
+          <!-- ボタン外枠【flex 横2列: 軽作業ボタン + IT作業ボタン】 -->
+          <div class="link_wrapper">
+            <a class="link_button" href="light_works.html"
+              >軽作業
 
-        <!-- タブ切り替えエリア -->
-        <div class="tabs">
-          <input id="all" type="radio" name="tab_item" checked />
-          <label class="tab_item" for="all">東口（軽作業）</label>
-          <input id="programming" type="radio" name="tab_item" />
-          <label class="tab_item" for="programming">仙台駅前（IT作業）</label>
-          <div class="tab_content" id="all_content">
-            <a class="work_link" href="light_works.html">
-              <div class="works_content">
-                <img class="works_image" src="img/軽作業風景_1.jpg" alt="軽作業の作業風景" />
-                <div class="works_content_text">
-                  <h3 class="works_tab_title">軽作業</h3>
-                  <p class="works_tab_description">東口（軽作業）の内容がここに入ります</p>
-                  <div class="works_tab_wrapper">
-                    <span class="works_tab_item">封入・梱包作業</span>
-                    <span class="works_tab_item">仕分け・ピッキング</span>
-                    <span class="works_tab_item">組み立て作業</span>
-                  </div>
-                </div>
-              </div>
+              <span class="link_icon left_size">→</span>
             </a>
-          </div>
-          <div class="tab_content" id="programming_content">
-            <a class="work_link" href="it_works.html">
-              <div class="works_content">
-                <img class="works_image" src="img/IT作業風景.jpg" alt="IT作業の作業風景" />
-                <div class="works_content_text">
-                  <h3 class="works_tab_title">IT作業</h3>
-                  <p class="works_tab_description">パソコンを使ったIT作業です。ホームページ制作やWordPress運用をします。</p>
-                  <div class="works_tab_wrapper">
-                    <span class="works_tab_item">ホームページ制作</span>
-                    <span class="works_tab_item">WordPress運用</span>
-                    <span class="works_tab_item">AI活用サポート</span>
-                  </div>
-                </div>
-              </div>
+            <a class="link_button" href="it_works.html"
+              >IT作業
+              <span class="link_icon right_size">→</span>
             </a>
           </div>
         </div>
-        <!-- ⚠ REVIEW: クリック可能な要素が `<span>` であり、スクリーンリーダーで認識しづらい → 修正例: `<button type="button">詳しい内容については画像をクリックしてください。</button>` -->
-        <span class="works_tab_button">詳しい内容については画像をクリックしてください。</span>
+        <!-- └ 画像側（右） grid 2列-->
+        <div class="link_grid">
+          <img class="link_img" src="img/仙台駅.png" alt="PC作業スペースの写真" />
+          <img class="link_img" src="img/東口リンクワークス.png" alt="軽作業スペースの写真" />
+          <img class="link_img" src="img/デスク風景.png" alt="PC作業スペースの写真" />
+          <img class="link_img" src="img/リンクワークス相談室.png" alt="軽作業スペースの写真" />
+        </div>
       </section>
     </main>
     <script src="js/script.js"></script>

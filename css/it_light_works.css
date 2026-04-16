@@ -1,16 +1,15 @@
 :root {
-  --section-margin: 9rem; /* 各セクションの下に空ける余白 */
-  --cream: #ffffff; /* ページ全体の背景（白） */
-  --accent-color: #0284c7; /* 見出しの下線、役職名(利用者の声)、時刻の青 　⇀強調するときに使用 */
-  --accent: #bae6fd; /* CTAボタンの背景色 */
-  --text-color: black; /* 本文の文字色 */
-  --blue-light: #bae6fd; /* 一日の流れの偶数行の薄い水色＋CTAのボタン */
-  --border: #7dd3fc; /* 枠線・吹き出しの線の水色 ----------- 一日の流れの枠線など*/
-  --section-bg: #e0f2fe; /* 「業務内容」・「一日の流れ」 -----------  のセクション背景色 */
+  --section-margin: 12rem; /* 各セクションの下に空ける余白 */
+  --cream: #fff; /* ページ全体の背景（白） */
+  --accent-color: #0a7ab5; /* 見出しの下線、役職名(利用者の声)、時刻の青 　⇀強調するときに使用 */
+  --accent: #e4f1f8; /* CTAボタンの背景色 */
+  --text-color: #333; /* 本文の文字色 */
+  --blue-light: #e4f1f8; /* 一日の流れの偶数行＋CTAのボタン */
+  --border: #c5dde9; /* 枠線・吹き出しの線 ----------- 一日の流れの枠線など*/
+  --section-bg: #f0f7fc; /* 「業務内容」・「一日の流れ」 -----------  のセクション背景色 */
 }
 
 body {
-  background: var(--cream);
   line-height: 1.9;
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 400;
@@ -69,13 +68,13 @@ body {
   color: white;
 
   padding: 3rem 4rem 2rem 2rem;
-  background-color: rgba(3, 105, 161, 0.82);
+  background-color: rgba(59, 139, 181, 0.65);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
 /* 青背景のときはラベルを薄色にする */
 .hero_content .main_label {
-  color: #cbd5e1;
+  color: white;
 }
 
 .hero_content .main_label::after {
@@ -110,7 +109,7 @@ body {
   line-height: 1.5;
   margin-bottom: 2rem;
 
-  /* 文字の後ろだけ色をつける */
+  /* 文字の後ろだけ色をつける（ドラッグ選択風） */
   background-color: #1d4ed8;
   padding: 0.3rem 0.8rem;
 }
@@ -120,6 +119,7 @@ body {
   letter-spacing: 0.02em;
   line-height: 1.9;
   margin-bottom: 2rem;
+  color: white;
 }
 
 /* ┌─────────────────────────────────────────┐
@@ -200,7 +200,7 @@ body {
   flex: 1;
   background-color: #ffffff;
   border: 1px solid var(--border);
-  border-radius: 2rem;
+  border-radius: 0.8rem;
   color: var(--text-color);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
@@ -217,7 +217,7 @@ body {
   width: 100%;
   height: 25rem;
   object-fit: cover;
-  border-radius: 1rem;
+  border-radius: 0.8rem 0.8rem 0 0;
   margin-bottom: 3rem;
 }
 
@@ -271,8 +271,8 @@ body {
 
 .voice_photo {
   flex-shrink: 0;
-  width: 9rem;
-  height: 9rem;
+  width: 11rem;
+  height: 11rem;
   border-radius: 50%;
 }
 
@@ -285,14 +285,14 @@ body {
 .voice_quote {
   position: relative;
   background: white;
-  border: 0.1rem solid var(--accent-color);
-  border-radius: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
   padding: 1.5rem;
   line-height: 2;
   margin-bottom: 1rem;
   min-height: 15rem;
   color: var(--text-color);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 /* 吹き出しの左に三角のしっぽ */
@@ -304,8 +304,8 @@ body {
   width: 1.2rem;
   height: 1.2rem;
   background: white;
-  border-left: 0.1rem solid var(--accent-color);
-  border-bottom: 0.1rem solid var(--accent-color);
+  border-left: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
   transform: rotate(45deg);
 }
 
@@ -346,19 +346,9 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 1rem;
+  padding: 1.2rem 1rem;
   font-weight: bold;
-
-  border: 0.1rem solid var(--border);
-}
-
-/* 最初と最後だけ角丸にする */
-.flow_item:nth-child(1) {
-  border-radius: 2rem 2rem 0 0;
-}
-
-.flow_item:nth-last-child(1) {
-  border-radius: 0 0 2rem 2rem;
+  border-bottom: 1px solid var(--border);
 }
 
 /* 行を交互に色分けして縞模様にする */
@@ -478,4 +468,5 @@ body {
 
 .accent_color {
   color: var(--accent-color);
+  font-weight: bold;
 }

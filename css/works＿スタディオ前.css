@@ -1,10 +1,12 @@
 :root {
   --side-width: 9rem;
   --sect-label-font-size: 1.2rem; /* タイトルの上のラベル */
+  --cream: #eff9fd; /* デフォルトの背景 */
   --main-color: #3aabdb;
 }
 
 body {
+  background: var(--cream);
   line-height: 1.95;
 }
 
@@ -92,7 +94,6 @@ body {
   line-height: 1.5;
   letter-spacing: 0.2rem;
   color: #1a3a4a;
-  color: var(--main-color);
 }
 
 /* 説明文 */
@@ -104,133 +105,150 @@ body {
 }
 
 /* ┌─────────────────────────────────────────┐
-   │ 作業リンク                              │
+   │ 作業内容（タブセクション）               │
    └─────────────────────────────────────────┘ */
 
-/* 作業リンクセクション外枠【flex 横2列: テキスト側 + 画像側】 */
-.link_area {
-  display: flex;
-  align-items: center;
-  gap: 3rem;
-  padding-top: 3rem;
-  padding-bottom: 8rem;
+/* セクション外枠 */
+.works_tab_area {
+  text-align: center;
 }
 
-/* └ テキスト側（左） */
-.link_text {
-  width: 35%;
-  font-size: var(--sect-label-font-size);
+/* セクションタイトル */
+.works_tab_title {
+  font-family: "Zen Maru Gothic", sans-serif;
+  letter-spacing: 0.15rem;
+  margin-top: 0;
+  font-weight: normal;
 }
 
-/* ラベル（LINKWORKS SENDAI） */
-.link_label {
-  display: block-flex;
-  font-size: 0.8rem;
-  padding-left: 0.5rem;
-
-  justify-content: center;
-  align-items: center;
-}
-
-.link_label::after {
-  content: "";
-  display: inline-block;
-  width: 2rem;
-  height: 0.1rem;
-  margin-bottom: 0.2rem;
-  background-color: black;
-  margin-left: 0.5rem;
-}
-
-/* 見出し（あなたの「できる」を、見つけよう。） */
-.link_title {
-  line-height: 1.5;
+/* セクション説明文 */
+.works_tab_description {
   padding-top: 2rem;
-  padding-bottom: 2rem;
-  font-size: 2.7rem;
-  font-family: "Noto Serif JP", serif;
-  font-weight: 500;
+  margin-bottom: 3rem;
 }
 
-/* ボタン外枠【flex 横2列: 軽作業ボタン + IT作業ボタン】 */
-.link_wrapper {
+/*タブ切り替え全体のスタイル*/
+.tabs {
   display: flex;
-  gap: 1.2rem;
-  margin-left: -1rem;
+  flex-wrap: wrap;
+  padding-bottom: 4rem;
+  box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.08);
+  margin: 0 auto;
+  border-radius: 2rem;
+  background: linear-gradient(to bottom, #c5e8f7, #eff9fd);
 }
 
-/* リンクボタン 楕円系　2つ*/
-.link_button {
-  color: var(--main-color);
-  border-radius: 100px;
-  border: 1px solid #333;
-
-  padding: 0.4rem 0.2rem 0.3rem 2.5rem;
-
-  font-size: 1.2rem;
-  width: 4rem;
-
-  display: flex;
-  align-items: center;
-  gap: 2.5rem;
+/*タブのスタイル*/
+.tab_item {
+  display: block;
+  width: calc(100% / 2);
+  height: 5rem;
+  border-bottom: 0.3rem solid #5bc8f5;
+  border-radius: 2rem;
+  background-color: #dcf2fc;
+  font-weight: bold;
+  line-height: 5rem;
+  color: #565656;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+.tab_item:hover {
+  opacity: 0.75;
 }
 
-.link_button:hover {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  transform: translateY(1px);
+/*ラジオボタンを全て消す*/
+input[name="tab_item"] {
+  display: none;
 }
 
-.link_button:nth-child(1) {
-  flex: 1;
-  background: #fff;
-  color: #333;
+/*タブ切り替えの中身のスタイル*/
+.tab_content {
+  display: none;
+  width: 100%;
+  padding: 4rem 4rem 0;
+  overflow: hidden;
 }
 
-.link_button:nth-child(2) {
-  flex: 1;
-  background: #333; /* 黒背景 */
-  color: #fff; /* 白文字 */
+/*選択されているタブのコンテンツのみを表示*/
+#all:checked ~ #all_content,
+#programming:checked ~ #programming_content {
+  display: block;
+  background: linear-gradient(to bottom, #c5e8f7, #eff9fd);
 }
 
-/* 左のアイコン */
-.link_icon {
-  display: inline-flex;
-  width: 2.4rem;
-  height: 2.4rem;
-
-  margin-left: auto;
-  border-radius: 50%;
-
-  outline: black solid 0.1rem;
-
-  align-items: center;
-  justify-content: center;
+/*選択されているタブのスタイルを変える*/
+.tabs input:checked + .tab_item {
+  background-color: #3aabdb;
+  color: #fff;
 }
 
-/* 左のアイコン */
-.left_size {
+.works_tab_button {
+  display: inline-block;
+  margin-top: 5rem;
+  padding: 1rem 2rem;
+  background-color: var(--main-color);
   color: white;
-  background-color: black;
-  outline: black solid 0.1rem;
+  border-radius: 100px;
+  position: relative;
+  margin-bottom: 3rem;
+  font-weight: normal;
 }
 
-/* 右のアイコン */
-.right_size {
-  background-color: white;
-  color: #333;
-  outline: white solid 0.1rem;
+.works_tab_button::after {
+  content: "";
+  height: 1rem;
+  width: 1rem;
+
+  position: absolute;
+  top: -1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+
+  background-color: var(--main-color);
 }
 
-/* └ 画像側（右） */
-.link_grid {
-  width: calc((100% - 35%) - 5rem);
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+/* ┌─────────────────────────────────────────┐
+   │ タブの内容                        │
+   └─────────────────────────────────────────┘ */
+
+.works_content {
+  height: 30rem;
+
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.work_link {
+  display: block;
+  cursor: pointer;
+}
+
+.works_image {
+  width: calc((100% - 5rem) / 2);
+  border-radius: 1rem;
+}
+
+.works_content_text {
+  width: calc((100% - 5rem) / 2);
+  text-align: left;
+}
+
+.works_tab_wrapper {
+  display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 
-/* 画像 */
-.link_img {
+.works_tab_item {
+  padding: 0.5rem 2rem;
+  font-size: 1.2rem;
+  font-weight: normal;
+  background-color: rgba(58, 171, 219, 0.15);
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+  border-radius: 100px;
 }
 
 /* ┌─────────────────────────────────────────┐
